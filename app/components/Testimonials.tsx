@@ -80,7 +80,7 @@ export default function Testimonials() {
       {/*      transition={{ duration: 0.8, delay: 0.3 }}*/}
       {/*      className="text-4xl md:text-5xl font-bold text-white mb-6"*/}
       {/*    >*/}
-      {/*      Empresas que <span className="bg-gradient-to-r from-[#5b43e6] to-[#f5503d] bg-clip-text text-transparent">Confiam</span> na Lúmex*/}
+      {/*      Empresas que <span className="bg-gradient-to-r text-gradient">Confiam</span> na Lúmex*/}
       {/*    </motion.h2>*/}
 
       {/*    <motion.p*/}
@@ -99,7 +99,7 @@ export default function Testimonials() {
       {/*      initial={{ opacity: 0, scale: 0.9 }}*/}
       {/*      animate={isInView ? { opacity: 1, scale: 1 } : {}}*/}
       {/*      transition={{ duration: 0.8, delay: 0.5 }}*/}
-      {/*      className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 md:p-12 relative overflow-hidden"*/}
+      {/*      className="bg-white/5 backdrop-blur-3xl rounded-3xl p-8 md:p-12 relative overflow-hidden"*/}
       {/*    >*/}
       {/*      /!* Background decoration *!/*/}
       {/*      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#5b43e6]/10 to-[#f5503d]/10 rounded-full blur-3xl"></div>*/}
@@ -149,7 +149,7 @@ export default function Testimonials() {
       {/*        whileHover={{ scale: 1.1 }}*/}
       {/*        whileTap={{ scale: 0.9 }}*/}
       {/*        onClick={prevTestimonial}*/}
-      {/*        className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300 border border-white/20"*/}
+      {/*        className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full transition-all duration-100 border border-white/20"*/}
       {/*      >*/}
       {/*        <ChevronLeft className="h-6 w-6" />*/}
       {/*      </motion.button>*/}
@@ -160,7 +160,7 @@ export default function Testimonials() {
       {/*            key={index}*/}
       {/*            whileHover={{ scale: 1.2 }}*/}
       {/*            onClick={() => setCurrentIndex(index)}*/}
-      {/*            className={`w-3 h-3 rounded-full transition-all duration-300 ${*/}
+      {/*            className={`w-3 h-3 rounded-full transition-all duration-100 ${*/}
       {/*              index === currentIndex*/}
       {/*                ? 'bg-gradient-to-r from-[#5b43e6] to-[#f5503d]'*/}
       {/*                : 'bg-white/30 hover:bg-white/50'*/}
@@ -173,7 +173,7 @@ export default function Testimonials() {
       {/*        whileHover={{ scale: 1.1 }}*/}
       {/*        whileTap={{ scale: 0.9 }}*/}
       {/*        onClick={nextTestimonial}*/}
-      {/*        className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300 border border-white/20"*/}
+      {/*        className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full transition-all duration-100 border border-white/20"*/}
       {/*      >*/}
       {/*        <ChevronRight className="h-6 w-6" />*/}
       {/*      </motion.button>*/}
@@ -187,7 +187,7 @@ export default function Testimonials() {
       {/*    transition={{ duration: 0.8, delay: 0.8 }}*/}
       {/*    className="mt-20 text-center"*/}
       {/*  >*/}
-      {/*    <div className="bg-gradient-to-r from-[#5b43e6]/10 to-[#f5503d]/10 backdrop-blur-xl rounded-3xl p-8">*/}
+      {/*    <div className="bg-gradient-to-r from-[#5b43e6]/10 to-[#f5503d]/10 backdrop-blur-3xl rounded-3xl p-8">*/}
       {/*      <h3 className="text-2xl font-bold text-white mb-4">*/}
       {/*        Neuromarketing que gera resultados reais*/}
       {/*      </h3>*/}

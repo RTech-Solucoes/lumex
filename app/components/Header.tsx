@@ -30,18 +30,10 @@ export default function Header() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-[#18191c]/80 backdrop-blur-xl border border-white/10 mx-auto mt-6 rounded-3xl max-w-7xl shadow-lg shadow-black/20' 
-          : 'bg-transparent'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-100 backdrop-blur-3xl"
     >
-      <div className={`max-w-7xl mx-auto transition-all duration-300 ${
-        scrolled ? 'px-8 py-4' : 'px-4 sm:px-6 lg:px-8'
-      }`}>
-        <div className={`flex items-center justify-between transition-all duration-300 ${
-          scrolled ? 'h-14' : 'h-16'
-        }`}>
+      <div className="max-w-7xl mx-auto transition-all duration-100 px-4 sm:px-6 lg:px-8 py-4">
+        <div className="flex items-center justify-between transition-all duration-100 h-16">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -68,7 +60,7 @@ export default function Header() {
                   className="text-white/70 hover:text-white transition-all duration-200 relative group"
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] group-hover:w-full transition-all duration-100"></span>
                 </motion.a>
               ))}
             </div>
@@ -78,7 +70,7 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="hidden md:block bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-6 py-2 rounded-full font-medium hover:shadow-lg hover:shadow-[#5b43e6]/25 transition-all duration-300"
+            className="hidden md:block bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-6 py-2 font-medium hover:shadow-lg hover:shadow-[#5b43e6]/25 transition-all duration-100"
           >
             Fale Conosco
           </motion.button>
@@ -101,7 +93,7 @@ export default function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-[#18191c]/90 backdrop-blur-xl border-t border-white/10"
+              className="md:hidden bg-[#18191c]/90 backdrop-blur-3xl border-t border-white/10"
             >
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {navItems.map((item) => (
@@ -117,7 +109,7 @@ export default function Header() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full mt-4 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-6 py-2 rounded-full font-medium"
+                  className="w-full mt-4 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-6 py-2 font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   Fale Conosco

@@ -68,7 +68,7 @@ export default function Services() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            O que <span className="bg-gradient-to-r from-[#5b43e6] to-[#f5503d] bg-clip-text text-transparent">Oferecemos</span>
+            O que <span className="bg-gradient-to-r text-gradient">Oferecemos</span>
           </motion.h2>
 
           <motion.p
@@ -83,7 +83,6 @@ export default function Services() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
-            const Icon = service.icon;
             return (
               <motion.div
                 key={service.title}
@@ -92,15 +91,15 @@ export default function Services() {
                 transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
                 className="group h-full"
               >
-                <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 hover:border-[#5b43e6]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#5b43e6]/10 h-full flex flex-col">
+                <div className="bg-white/5 backdrop-blur-3xl rounded-3xl p-8 hover:border-[#5b43e6]/30 transition-all duration-100 hover:shadow-lg hover:shadow-[#5b43e6]/10 h-full flex flex-col">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] rounded-full mb-6"
                   >
-                    <Icon className="h-8 w-8 text-white" />
+                    <service.icon className="h-8 w-8 text-white" />
                   </motion.div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-[#5b43e6] group-hover:to-[#f5503d] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-[#5b43e6] group-hover:to-[#f5503d] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-100">
                     {service.title}
                   </h3>
                   
@@ -126,7 +125,7 @@ export default function Services() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group/btn mt-6 w-full bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-6 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-[#5b43e6]/25 transition-all duration-300 inline-flex items-center justify-center"
+                    className="group/btn mt-6 w-full bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-6 py-3 font-medium hover:shadow-lg hover:shadow-[#5b43e6]/25 transition-all duration-100 inline-flex items-center justify-center"
                   >
                     Saiba Mais
                     <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -144,7 +143,7 @@ export default function Services() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="mt-20 text-center"
         >
-          <div className="bg-gradient-to-r from-[#5b43e6]/10 to-[#f5503d]/10 backdrop-blur-xl rounded-3xl p-12">
+          <div className="bg-gradient-to-r from-[#5b43e6]/10 to-[#f5503d]/10 backdrop-blur-3xl rounded-3xl p-12">
             <h3 className="text-3xl font-bold text-white mb-6">
               Pronto para Transformar seu Negócio?
             </h3>
@@ -155,7 +154,7 @@ export default function Services() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-8 py-4 rounded-full font-semibold inline-flex items-center justify-center hover:shadow-lg hover:shadow-[#5b43e6]/25 transition-all duration-300"
+              className="group bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-8 py-4 font-semibold inline-flex items-center justify-center hover:shadow-lg hover:shadow-[#5b43e6]/25 transition-all duration-100"
             >
               Agendar Conversa Gratuita
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

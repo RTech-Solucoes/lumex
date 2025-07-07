@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Rocket, Target, Brain, CheckCircle, BarChart3, Users } from 'lucide-react';
+import Image from "next/image";
 
 export default function Differentials() {
   const ref = useRef(null);
@@ -59,14 +60,24 @@ export default function Differentials() {
             <span className="text-sm text-[#e8eafa]">Nossos Diferenciais</span>
           </motion.div>
 
-          <motion.h2
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            className="flex items-start justify-center mb-6 gap-4"
           >
-            Por que Escolher a <span className="bg-gradient-to-r from-[#5b43e6] to-[#f5503d] bg-clip-text text-transparent">Lúmex</span>
-          </motion.h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mt-[6px]">
+              Por que Escolher a
+            </h2>
+            <Image
+              src="/Logo.png"
+              alt="Lúmex Marketing Agency"
+              width={120}
+              height={40}
+              className="h-12 w-auto"
+              priority
+            />
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -81,7 +92,6 @@ export default function Differentials() {
         {/* Differentials Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-20">
           {differentials.map((differential, index) => {
-            const Icon = differential.icon;
             return (
               <motion.div
                 key={differential.title}
@@ -90,15 +100,15 @@ export default function Differentials() {
                 transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
                 className="group"
               >
-                <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 hover:border-[#5b43e6]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#5b43e6]/10 h-full">
+                <div className="bg-white/5 backdrop-blur-3xl rounded-3xl p-8 hover:border-[#5b43e6]/30 transition-all duration-100 hover:shadow-lg hover:shadow-[#5b43e6]/10 h-full">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] rounded-full mb-6"
                   >
-                    <Icon className="h-8 w-8 text-white" />
+                    <differential.icon className="h-8 w-8 text-white" />
                   </motion.div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-[#5b43e6] group-hover:to-[#f5503d] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-[#5b43e6] group-hover:to-[#f5503d] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-100">
                     {differential.title}
                   </h3>
                   
@@ -116,7 +126,7 @@ export default function Differentials() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="bg-gradient-to-r from-[#5b43e6]/10 to-[#f5503d]/10 backdrop-blur-xl rounded-3xl p-8 md:p-12"
+          className="bg-gradient-to-r from-[#5b43e6]/10 to-[#f5503d]/10 backdrop-blur-3xl rounded-3xl p-8 md:p-12"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -129,7 +139,6 @@ export default function Differentials() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
-              const Icon = stat.icon;
               return (
                 <motion.div
                   key={stat.label}
@@ -149,7 +158,7 @@ export default function Differentials() {
                     }}
                     className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] rounded-full mb-4 mx-auto"
                   >
-                    <Icon className="h-8 w-8 text-white" />
+                    <stat.icon className="h-8 w-8 text-white" />
                   </motion.div>
                   
                   <div className="text-3xl font-bold text-white mb-2">

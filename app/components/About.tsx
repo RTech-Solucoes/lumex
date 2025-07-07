@@ -58,7 +58,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            Quem <span className="bg-gradient-to-r from-[#5b43e6] to-[#f5503d] bg-clip-text text-transparent">Somos</span>
+            Quem <span className="bg-gradient-to-r text-gradient">Somos</span>
           </motion.h2>
 
           <motion.p
@@ -67,7 +67,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-[#878899] max-w-4xl mx-auto leading-relaxed"
           >
-            Na Lúmex, somos uma agência de marketing especializada em <strong className="text-[#5b43e6]">neuromarketing</strong>. 
+            Na Lúmex, somos uma agência de marketing especializada em <strong className="text-gradient">neuromarketing</strong>.
             Nosso propósito é simples: ajudar empresas a crescerem no digital, entendendo o 
             comportamento do consumidor para criar campanhas que realmente funcionam.
           </motion.p>
@@ -85,7 +85,6 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => {
-            const Icon = feature.icon;
             return (
               <motion.div
                 key={feature.title}
@@ -94,15 +93,15 @@ export default function About() {
                 transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
                 className="group"
               >
-                <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 hover:border-[#5b43e6]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#5b43e6]/10 h-full">
+                <div className="bg-white/5 backdrop-blur-3xl rounded-3xl p-8 hover:border-[#5b43e6]/30 transition-all duration-100 hover:shadow-lg hover:shadow-[#5b43e6]/10 h-full">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] rounded-full mb-6"
                   >
-                    <Icon className="h-8 w-8 text-white" />
+                    <feature.icon className="h-8 w-8 text-white" />
                   </motion.div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-[#5b43e6] group-hover:to-[#f5503d] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-[#5b43e6] group-hover:to-[#f5503d] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-100">
                     {feature.title}
                   </h3>
                   
@@ -122,7 +121,7 @@ export default function About() {
           transition={{ duration: 0.8, delay: 1 }}
           className="mt-20 text-center"
         >
-          <div className="bg-gradient-to-r from-[#5b43e6]/10 to-[#f5503d]/10 backdrop-blur-xl rounded-3xl p-12">
+          <div className="bg-gradient-to-r from-[#5b43e6]/10 to-[#f5503d]/10 backdrop-blur-3xl rounded-3xl p-12">
             <h3 className="text-3xl font-bold text-white mb-6">
               Nossa Missão
             </h3>

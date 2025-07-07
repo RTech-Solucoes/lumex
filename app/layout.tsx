@@ -1,8 +1,85 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+import localFont from 'next/font/local'
+
+const degular = localFont({
+  src: [
+    {
+      path: '../fonts/DegularDisplay-Thin.otf',
+      weight: '100',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/DegularDisplay-Light.otf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/DegularDisplay-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/DegularDisplay-Medium.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/DegularDisplay-Semibold.otf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/DegularDisplay-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/DegularDisplay-Black.otf',
+      weight: '900',
+      style: 'normal',
+    },
+    // Italic variants
+    {
+      path: '../fonts/DegularDisplay-ThinItalic.otf',
+      weight: '100',
+      style: 'italic',
+    },
+    {
+      path: '../fonts/DegularDisplay-LightItalic.otf',
+      weight: '300',
+      style: 'italic',
+    },
+    {
+      path: '../fonts/DegularDisplay-MediumItalic.otf',
+      weight: '500',
+      style: 'italic',
+    },
+    {
+      path: '../fonts/DegularDisplay-RegularItalic.otf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../fonts/DegularDisplay-SemiboldItalic.otf',
+      weight: '600',
+      style: 'italic',
+    },
+    {
+      path: '../fonts/DegularDisplay-BoldItalic.otf',
+      weight: '700',
+      style: 'italic',
+    },
+    {
+      path: '../fonts/DegularDisplay-BlackItalic.otf',
+      weight: '900',
+      style: 'italic',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-degular',
+})
 
 export const metadata: Metadata = {
   title: 'Lúmex',
@@ -65,7 +142,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={`${inter.className} bg-[#18191c] text-white antialiased`}>
+      <body className={`${degular.className} bg-[#18191c] text-white antialiased`}>
         {children}
       </body>
     </html>

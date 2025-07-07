@@ -80,3 +80,25 @@
     @apply bg-background text-foreground;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #5b43e6, #f5503d);
+  background-clip: text;
+  color: transparent;
+}
+
+* {
+  letter-spacing: 0.05em;
+}

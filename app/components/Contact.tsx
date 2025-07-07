@@ -92,7 +92,7 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            Pronto para <span className="bg-gradient-to-r from-[#5b43e6] to-[#f5503d] bg-clip-text text-transparent">Começar?</span>
+            Pronto para <span className="bg-gradient-to-r text-gradient">Começar?</span>
           </motion.h2>
 
           <motion.p
@@ -113,7 +113,7 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8">
+            <div className="bg-white/5 backdrop-blur-3xl rounded-3xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6">
                   Solicitar Estratégia Personalizada
                 </h3>
@@ -145,7 +145,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#878899] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#878899] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100"
                         placeholder="Seu nome completo"
                       />
                     </div>
@@ -161,7 +161,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#878899] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#878899] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100"
                         placeholder="seu@email.com"
                       />
                     </div>
@@ -177,7 +177,7 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#878899] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#878899] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100"
                         placeholder="(11) 99999-9999"
                       />
                     </div>
@@ -192,7 +192,7 @@ export default function Contact() {
                         value={formData.message}
                         onChange={handleChange}
                         rows={4}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#878899] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-300 resize-none"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#878899] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100 resize-none"
                         placeholder="Conte-nos mais sobre seu negócio e objetivos..."
                       />
                     </div>
@@ -202,7 +202,7 @@ export default function Contact() {
                       disabled={isSubmitting}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-full bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-8 py-4 rounded-full font-semibold inline-flex items-center justify-center hover:shadow-lg hover:shadow-[#5b43e6]/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-8 py-4 font-semibold inline-flex items-center justify-center hover:shadow-lg hover:shadow-[#5b43e6]/25 transition-all duration-100 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? (
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white" />
@@ -226,7 +226,6 @@ export default function Contact() {
             className="space-y-6"
           >
             {contactInfo.map((info, index) => {
-              const Icon = info.icon;
               return (
                 <motion.div
                   key={info.title}
@@ -235,17 +234,17 @@ export default function Contact() {
                   transition={{ duration: 0.8, delay: 0.7 + index * 0.1 }}
                   className="group"
                 >
-                  <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-6 hover:border-[#5b43e6]/30 transition-all duration-300 hover:shadow-lg hover:shadow-[#5b43e6]/10">
+                  <div className="bg-white/5 backdrop-blur-3xl rounded-3xl p-6 hover:border-[#5b43e6]/30 transition-all duration-100 hover:shadow-lg hover:shadow-[#5b43e6]/10">
                     <div className="flex items-start space-x-4">
                       <motion.div
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] rounded-full flex items-center justify-center"
                       >
-                        <Icon className="h-6 w-6 text-white" />
+                        <info.icon className="h-6 w-6 text-white" />
                       </motion.div>
                       
                       <div className="flex-1">
-                        <h4 className="text-lg font-semibold text-white mb-1 group-hover:bg-gradient-to-r group-hover:from-[#5b43e6] group-hover:to-[#f5503d] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                        <h4 className="text-lg font-semibold text-white mb-1 group-hover:bg-gradient-to-r group-hover:from-[#5b43e6] group-hover:to-[#f5503d] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-100">
                           {info.title}
                         </h4>
                         <p className="text-[#878899] text-sm mb-2">
@@ -257,7 +256,7 @@ export default function Contact() {
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="text-[#5b43e6] text-sm font-medium hover:bg-gradient-to-r hover:from-[#5b43e6] hover:to-[#f5503d] hover:bg-clip-text hover:text-transparent transition-all duration-300 inline-flex items-center"
+                          className="text-[#5b43e6] text-sm font-medium hover:bg-gradient-to-r hover:from-[#5b43e6] hover:to-[#f5503d] hover:bg-clip-text hover:text-transparent transition-all duration-100 inline-flex items-center"
                         >
                           {info.action}
                           <ArrowRight className="ml-1 h-4 w-4" />
@@ -274,7 +273,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 1 }}
-              className="bg-gradient-to-r from-[#5b43e6]/10 to-[#f5503d]/10 backdrop-blur-xl rounded-3xl p-6"
+              className="bg-gradient-to-r from-[#5b43e6]/10 to-[#f5503d]/10 backdrop-blur-3xl rounded-3xl p-6"
             >
               <div className="flex items-center space-x-3 mb-4">
                 <MapPin className="h-6 w-6 text-[#5b43e6]" />
