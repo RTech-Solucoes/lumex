@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import Navigation from './components/Navigation';
+import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
@@ -12,10 +12,8 @@ import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <div className="relative bg-gradient-to-b from-[#18191c] via-[#18191c] to-[#18191c] overflow-hidden">
-      {/* Animated background light spots */}
+    <div className="relative bg-[#18191c] overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        {/* Primary color spots */}
         <motion.div
           animate={{
             scale: [1, 1.3, 1],
@@ -129,23 +127,6 @@ export default function Home() {
         
         <motion.div
           animate={{
-            scale: [1.1, 1, 1.1],
-            opacity: [0.18, 0.38, 0.18],
-            x: [0, -50, 0],
-            y: [0, -30, 0],
-          }}
-          transition={{
-            duration: 13,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 14
-          }}
-          className="absolute bottom-1/6 right-2/5 w-40 h-40 bg-[#f5503d]/42 rounded-full blur-3xl shadow-[0_0_50px_rgba(245,80,61,0.6)]"
-        />
-        
-        {/* Corner light spots as requested */}
-        <motion.div
-          animate={{
             scale: [1, 1.4, 1],
             opacity: [0.3, 0.6, 0.3],
             x: [0, 20, 0],
@@ -156,7 +137,7 @@ export default function Home() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-0 left-0 w-96 h-96 bg-[#f5503d]/50 rounded-full blur-3xl shadow-[0_0_150px_rgba(245,80,61,0.8)]"
+          className="absolute top-0 left-0 w-96 h-96 bg-[#5b43e6]/50 rounded-full blur-3xl shadow-[0_0_150px_rgba(91,67,230,0.4)]"
         />
         
         <motion.div
@@ -191,7 +172,6 @@ export default function Home() {
           className="absolute bottom-0 left-0 w-72 h-72 bg-[#f5503d]/40 rounded-full blur-3xl shadow-[0_0_100px_rgba(245,80,61,0.6)]"
         />
         
-        {/* Additional glowing spots for more ambiance */}
         <motion.div
           animate={{
             scale: [1, 1.6, 1],
@@ -225,7 +205,7 @@ export default function Home() {
         />
       </div>
       
-      <Navigation />
+      <Header />
       <main>
         <Hero />
         <About />

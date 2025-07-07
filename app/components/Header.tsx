@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
-export default function Navigation() {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -32,12 +32,12 @@ export default function Navigation() {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-[#18191c]/80 backdrop-blur-xl border border-white/10 mx-6 mt-6 rounded-3xl shadow-lg shadow-black/20' 
+          ? 'bg-[#18191c]/80 backdrop-blur-xl border border-white/10 mx-auto mt-6 rounded-3xl max-w-7xl shadow-lg shadow-black/20' 
           : 'bg-transparent'
       }`}
     >
       <div className={`max-w-7xl mx-auto transition-all duration-300 ${
-        scrolled ? 'px-8 py-2' : 'px-4 sm:px-6 lg:px-8'
+        scrolled ? 'px-8 py-4' : 'px-4 sm:px-6 lg:px-8'
       }`}>
         <div className={`flex items-center justify-between transition-all duration-300 ${
           scrolled ? 'h-14' : 'h-16'

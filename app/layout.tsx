@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Lúmex - Agência de Neuromarketing | Aumente suas Vendas Online',
+  title: 'Lúmex',
   description: 'Na Lúmex, combinamos neurociência, marketing e estratégias personalizadas para atrair mais clientes e vender mais todos os dias. Agência especializada em neuromarketing.',
   keywords: 'neuromarketing, marketing digital, vendas online, presença digital, crescimento online, agência de marketing, neurociência, comportamento do consumidor',
   authors: [{ name: 'Lúmex Marketing Agency' }],
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Lúmex - Agência de Neuromarketing | Aumente suas Vendas Online',
+    title: 'Lúmex',
     description: 'Na Lúmex, combinamos neurociência, marketing e estratégias personalizadas para atrair mais clientes e vender mais todos os dias.',
     url: 'https://lumex.com.br',
     siteName: 'Lúmex Marketing Agency',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/Logo.png',
         width: 1200,
         height: 630,
         alt: 'Lúmex Marketing Agency - Neuromarketing',
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lúmex - Agência de Neuromarketing | Aumente suas Vendas Online',
+    title: 'Lúmex',
     description: 'Na Lúmex, combinamos neurociência, marketing e estratégias personalizadas para atrair mais clientes e vender mais todos os dias.',
-    images: ['/og-image.jpg'],
+    images: ['/Logo.png'],
   },
   robots: {
     index: true,
@@ -62,6 +62,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={`${inter.className} bg-[#18191c] text-white antialiased`}>
         {children}
       </body>
