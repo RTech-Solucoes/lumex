@@ -13,7 +13,7 @@ export default function Footer() {
     { href: '#inicio', label: 'Início' },
     { href: '#sobre', label: 'Sobre' },
     { href: '#servicos', label: 'Serviços' },
-    { href: '#resultados', label: 'Resultados' },
+    // { href: '#resultados', label: 'Resultados' },
     { href: '#contato', label: 'Contato' }
   ];
 
