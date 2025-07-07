@@ -283,7 +283,7 @@ export default function Contact() {
                 </h4>
               </div>
               <p className="text-[#878899]">
-                São Paulo, SP - Brasil
+                Uberlândia, MG - Brasil
                 <br />
                 Atendimento presencial e online
               </p>
