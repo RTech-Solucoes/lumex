@@ -71,9 +71,9 @@ export default function Differentials() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-col md:flex-row items-start justify-center mb-6 gap-4"
+            className="flex flex-row flex-wrap md:flex-row items-start justify-center mb-6 gap-4"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-[6px]">
+            <h2 className="text-4xl whitespace-nowrap md:text-5xl font-bold text-white mt-[8px] md:mt-[9px]">
               Por que Escolher a
             </h2>
             <Image
@@ -81,7 +81,7 @@ export default function Differentials() {
               alt="Lúmex Marketing Agency"
               width={120}
               height={40}
-              className="h-12 w-auto"
+              className="h-10 md:h-12 w-auto"
               priority
             />
           </motion.div>
@@ -99,8 +99,8 @@ export default function Differentials() {
         {/* Differentials Grid */}
         <div className="flex flex-col gap-8 mb-20">
           <div
-            style={{ gridTemplateColumns: '2fr 1fr'}}
-            className="grid gap-8"
+            style={{ gridTemplateColumns: '1fr 2fr'}}
+            className="flex flex-col md:grid gap-8"
           >
             {differentials.slice(0, 2).map((differential, index) =>
               <DifferentialCard
@@ -112,8 +112,8 @@ export default function Differentials() {
             )}
           </div>
           <div
-            style={{ gridTemplateColumns: '1fr 2fr'}}
-            className="grid gap-8"
+            style={{ gridTemplateColumns: '2fr 1fr'}}
+            className="flex flex-col md:grid gap-8"
           >
             {differentials.slice(2, 4).map((differential, index) =>
               <DifferentialCard

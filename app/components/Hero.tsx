@@ -90,7 +90,7 @@ export default function Hero() {
                     to={200}
                     separator=","
                     direction="up"
-                    duration={2}
+                    duration={1}
                     className="count-up-text"
                   />
                 </div>
@@ -104,7 +104,7 @@ export default function Hero() {
                     to={40}
                     separator=","
                     direction="up"
-                    duration={2}
+                    duration={1}
                     className="count-up-text"
                   />
                   %
@@ -118,7 +118,7 @@ export default function Hero() {
                     to={98}
                     separator=","
                     direction="up"
-                    duration={2}
+                    duration={1}
                     className="count-up-text"
                   />
                   %
@@ -135,95 +135,6 @@ export default function Hero() {
             className="w-full h-auto"
             priority
           />
-
-          {/* Right Column - Visual */}
-          {/*<motion.div*/}
-          {/*  initial={{ opacity: 0, x: 50 }}*/}
-          {/*  animate={{ opacity: 1, x: 0 }}*/}
-          {/*  transition={{ duration: 0.8, delay: 0.2 }}*/}
-          {/*  className="relative"*/}
-          {/*>*/}
-          {/*  <div className="relative">*/}
-          {/*    /!* Glassmorphism card *!/*/}
-          {/*    <motion.div*/}
-          {/*      animate={{*/}
-          {/*        y: [0, -10, 0],*/}
-          {/*      }}*/}
-          {/*      transition={{*/}
-          {/*        duration: 6,*/}
-          {/*        repeat: Infinity,*/}
-          {/*        ease: "easeInOut"*/}
-          {/*      }}*/}
-          {/*      className="card p-8 border border-white/10 shadow-2xl"*/}
-          {/*    >*/}
-          {/*      <div className="flex items-center justify-between mb-6">*/}
-          {/*        <div className="flex items-center space-x-2">*/}
-          {/*          <div className="w-3 h-3 bg-[#f5503d] rounded-full"></div>*/}
-          {/*          <div className="w-3 h-3 bg-[#5b43e6] rounded-full"></div>*/}
-          {/*          <div className="w-3 h-3 bg-[#e8eafa] rounded-full"></div>*/}
-          {/*        </div>*/}
-          {/*        <TrendingUp className="h-6 w-6 text-[#5b43e6]" />*/}
-          {/*      </div>*/}
-
-          {/*      <div className="space-y-4">*/}
-          {/*        <div className="flex items-center justify-between">*/}
-          {/*          <span className="text-[#e8eafa]">Vendas Online</span>*/}
-          {/*          <span className="text-[#5b43e6] font-bold">+85%</span>*/}
-          {/*        </div>*/}
-          {/*        <div className="w-full bg-white/10 rounded-full h-2">*/}
-          {/*          <motion.div*/}
-          {/*            initial={{ width: 0 }}*/}
-          {/*            animate={{ width: '85%' }}*/}
-          {/*            transition={{ duration: 2, delay: 1 }}*/}
-          {/*            className="h-2 gradient rounded-full"*/}
-          {/*          />*/}
-          {/*        </div>*/}
-          {/*        */}
-          {/*        <div className="flex items-center justify-between">*/}
-          {/*          <span className="text-[#e8eafa]">Tráfego Qualificado</span>*/}
-          {/*          <span className="text-[#f5503d] font-bold">+120%</span>*/}
-          {/*        </div>*/}
-          {/*        <div className="w-full bg-white/10 rounded-full h-2">*/}
-          {/*          <motion.div*/}
-          {/*            initial={{ width: 0 }}*/}
-          {/*            animate={{ width: '90%' }}*/}
-          {/*            transition={{ duration: 2, delay: 1.5 }}*/}
-          {/*            className="h-2 bg-gradient-to-r from-[#f5503d] to-[#5b43e6] rounded-full"*/}
-          {/*          />*/}
-          {/*        </div>*/}
-
-          {/*        <div className="flex items-center justify-between">*/}
-          {/*          <span className="text-[#e8eafa]">ROI</span>*/}
-          {/*          <span className="text-[#5b43e6] font-bold">+300%</span>*/}
-          {/*        </div>*/}
-          {/*        <div className="w-full bg-white/10 rounded-full h-2">*/}
-          {/*          <motion.div*/}
-          {/*            initial={{ width: 0 }}*/}
-          {/*            animate={{ width: '95%' }}*/}
-          {/*            transition={{ duration: 2, delay: 2 }}*/}
-          {/*            className="h-2 gradient rounded-full"*/}
-          {/*          />*/}
-          {/*        </div>*/}
-          {/*      </div>*/}
-          {/*    </motion.div>*/}
-
-          {/*    /!* Floating elements *!/*/}
-          {/*    <motion.div*/}
-          {/*      animate={{*/}
-          {/*        y: [0, -20, 0],*/}
-          {/*        rotate: [0, 5, 0],*/}
-          {/*      }}*/}
-          {/*      transition={{*/}
-          {/*        duration: 4,*/}
-          {/*        repeat: Infinity,*/}
-          {/*        ease: "easeInOut"*/}
-          {/*      }}*/}
-          {/*      className="absolute -top-4 -right-4 gradient p-4 rounded-2xl"*/}
-          {/*    >*/}
-          {/*      <Target className="h-8 w-8 text-white" />*/}
-          {/*    </motion.div>*/}
-          {/*  </div>*/}
-          {/*</motion.div>*/}
         </div>
       </div>
     </section>

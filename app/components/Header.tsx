@@ -31,7 +31,7 @@ export default function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       style={{maxWidth: "calc(100vw - 32px)"}}
-      className="mx-auto fixed top-0 left-0 right-0 z-50 transition-all duration-100 backdrop-blur-3xl"
+      className="mx-auto z-50 transition-all duration-100"
     >
       <div className="max-w-7xl mx-auto transition-all duration-100 px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between transition-all duration-100 h-16">
@@ -46,7 +46,7 @@ export default function Header() {
           />
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <motion.a
@@ -63,14 +63,14 @@ export default function Header() {
           </div>
 
           {/* CTA Button */}
-          <button className="button-sm hidden md:block font-medium">
+          <button className="button-sm hidden lg:block font-medium">
             Fale Conosco
           </button>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="button-transparent md:hidden text-[#aaaaaa] hover:text-white focus:outline-none"
+            className="button-transparent lg:hidden text-[#aaaaaa] hover:text-white focus:outline-none"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -83,7 +83,7 @@ export default function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden backdrop-blur-3xl border-t border-white/10"
+              className="lg:hidden backdrop-blur-3xl border-t border-white/10"
             >
               <div className="pt-3 space-y-3">
                 {navItems.map((item) => (

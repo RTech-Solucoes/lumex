@@ -10,16 +10,11 @@ import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <div id="page" className="relative bg-[#18191c] overflow-x-hidden overflow-y-auto custom-scrollbar max-h-screen pt-24 lg:pt-0">
+    <div id="page" className="relative bg-[#18191c] overflow-x-hidden overflow-y-auto custom-scrollbar max-h-screen">
       <div className="fixed inset-0 pointer-events-none">
-        <div id="1" className="absolute top-1/2 right-1/4 w-80 h-80 bg-[#f5503d]/35 rounded-full blur-3xl shadow-[0_0_80px_rgba(245,80,61,0.5)]"/>
-        <div id="2" className="absolute bottom-1/3 left-1/3 w-72 h-72 bg-[#5b43e6]/30 rounded-full blur-3xl shadow-[0_0_90px_rgba(91,67,230,0.4)]"/>
-        <div id="3" className="absolute top-3/4 right-1/6 w-64 h-64 bg-[#f5503d]/45 rounded-full blur-3xl shadow-[0_0_70px_rgba(245,80,61,0.6)]"/>
-        <div id="4" className="absolute top-1/6 right-1/3 w-88 h-88 bg-[#5b43e6]/25 rounded-full blur-3xl shadow-[0_0_120px_rgba(91,67,230,0.3)]"/>
-        <div id="5" className="absolute bottom-1/4 left-1/5 w-56 h-56 bg-[#f5503d]/38 rounded-full blur-3xl shadow-[0_0_60px_rgba(245,80,61,0.5)]"/>
-        <div id="6" className="absolute top-2/3 left-2/3 w-48 h-48 bg-[#5b43e6]/28 rounded-full blur-3xl shadow-[0_0_75px_rgba(91,67,230,0.4)]"/>
-        <div id="7" className="absolute bottom-0 right-0 w-72 h-72 bg-[#f5503d]/20 rounded-full blur-3xl shadow-[0_0_100px_rgba(245,80,61,0.6)]"/>
-        <div id="8" className="absolute top-1/8 left-1/2 w-32 h-32 bg-[#5b43e6]/20 rounded-full blur-3xl shadow-[0_0_40px_rgba(91,67,230,0.3)]"/>
+        <div id="3" className="absolute top-3/4 right-1/6 w-64 h-64 bg-[#5b43e6]/10 rounded-full blur-3xl shadow-[0_0_70px_rgba(91,67,230,0.3)]"/>
+        <div id="7" className="absolute bottom-0 right-0 w-72 h-72 bg-[#f5503d]/10 rounded-full blur-3xl shadow-[0_0_100px_rgba(245,80,61,0.6)]"/>
+        <div id="8" className="absolute top-1/8 left-1/2 w-32 h-32 bg-[#5b43e6]/30 rounded-full blur-3xl shadow-[0_0_40px_rgba(91,67,230,0.3)]"/>
       </div>
 
       <Header/>

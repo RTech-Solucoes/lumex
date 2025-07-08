@@ -58,7 +58,7 @@ export default function About() {
             transition={{duration: 0.8, delay: 0.3}}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            Quem <span className="bg-gradient-to-r text-gradient">Somos</span>
+            Quem <span className="bg-gradient-to-r text-gradient">Somos*</span>
           </motion.h2>
 
           <motion.p
@@ -68,17 +68,9 @@ export default function About() {
             className="text-xl text-[#aaaaaa] max-w-4xl mx-auto leading-relaxed"
           >
             Na Lúmex, somos uma agência de marketing especializada em
-            <strong className="text-gradient"> neuromarketing </strong>.
-            Nosso propósito é simples: ajudar empresas a crescerem no digital, entendendo o
+            <strong className="text-gradient text-2xl"> neuromarketing </strong>
+            com um simples propósito: ajudar empresas a crescerem no digital, entendendo o
             comportamento do consumidor para criar campanhas que realmente funcionam.
-          </motion.p>
-
-          <motion.p
-            initial={{opacity: 0, y: 30}}
-            animate={isInView ? {opacity: 1, y: 0} : {}}
-            transition={{duration: 0.8, delay: 0.5}}
-            className="text-xl text-[#aaaaaa] max-w-4xl mx-auto leading-relaxed mt-6"
-          >
             Com estratégias exclusivas, você atrai mais clientes qualificados e transforma sua marca
             em referência no mercado digital.
           </motion.p>
