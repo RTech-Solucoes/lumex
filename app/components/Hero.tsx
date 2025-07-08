@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Brain, TrendingUp, Target } from 'lucide-react';
-import RotatingText from "@/components/reactbits/TextAnimations/RotatingText/RotatingText";
 
 export default function Hero() {
   return (
