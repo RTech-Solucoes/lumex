@@ -4,6 +4,7 @@ import {motion} from 'framer-motion';
 import {useInView} from 'framer-motion';
 import {useRef} from 'react';
 import {Brain, Users, TrendingUp, Award} from 'lucide-react';
+import Image from "next/image";
 
 export default function About() {
   const ref = useRef(null);
@@ -56,9 +57,18 @@ export default function About() {
             initial={{opacity: 0, y: 30}}
             animate={isInView ? {opacity: 1, y: 0} : {}}
             transition={{duration: 0.8, delay: 0.3}}
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            className="flex gap-8 text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            Quem <span className="bg-gradient-to-r text-gradient">Somos*</span>
+            <span>Quem</span>
+            <span className="text-gradient">Somos</span>
+            <Image
+              src="/icone.png"
+              alt="Lúmex Marketing Agency"
+              width={120}
+              height={40}
+              className="h-10 md:h-12 w-auto"
+              priority
+            />
           </motion.h2>
 
           <motion.p

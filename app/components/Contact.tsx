@@ -95,7 +95,7 @@ export default function Contact() {
             transition={{duration: 0.8, delay: 0.3}}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            Pronto para <span className="bg-gradient-to-r text-gradient">Começar?</span>
+            Pronto para <span className="text-gradient">Começar?</span>
           </motion.h2>
 
           <motion.p

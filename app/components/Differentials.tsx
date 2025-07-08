@@ -77,7 +77,7 @@ export default function Differentials() {
               Por que Escolher a
             </h2>
             <Image
-              src="/Logo.png"
+              src="/logo.png"
               alt="Lúmex Marketing Agency"
               width={120}
               height={40}

@@ -44,7 +44,7 @@ export default function Footer() {
           >
             <div className="flex items-center">
               <Image
-                src="/Logo.png"
+                src="/logo.png"
                 alt="Lúmex Marketing Agency"
                 width={120}
                 height={40}

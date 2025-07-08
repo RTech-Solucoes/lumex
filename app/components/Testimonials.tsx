@@ -80,7 +80,7 @@ export default function Testimonials() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            Empresas que <span className="bg-gradient-to-r text-gradient">Confiam</span> na Lúmex
+            Empresas que <span className="text-gradient">Confiam</span> na Lúmex
           </motion.h2>
 
           <motion.p

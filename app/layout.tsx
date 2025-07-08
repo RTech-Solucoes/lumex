@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     siteName: 'Lúmex Marketing Agency',
     images: [
       {
-        url: '/Logo.png',
+        url: '/logo.png',
         width: 1200,
         height: 630,
         alt: 'Lúmex Marketing Agency - Neuromarketing',
@@ -117,7 +117,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Lúmex',
     description: 'Na Lúmex, combinamos neurociência, marketing e estratégias personalizadas para atrair mais clientes e vender mais todos os dias.',
-    images: ['/Logo.png'],
+    images: ['/logo.png'],
   },
   robots: {
     index: true,

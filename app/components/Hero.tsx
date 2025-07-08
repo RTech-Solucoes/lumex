@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Brain, TrendingUp, Target } from 'lucide-react';
+import { ArrowRight, Brain } from 'lucide-react';
 import Image from "next/image";
 import CountUp from "@/components/reactbits/TextAnimations/CountUp/CountUp";
 
@@ -13,6 +13,14 @@ export default function Hero() {
       className="relative h-screen flex items-center justify-center overflow-hidden bg-transparent"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Image
+          src="/lamp.png"
+          alt="Ilustração de uma Lâmpada"
+          width={1067}
+          height={911}
+          className="absolute -top-40 -right-24 w-4/5 h-auto"
+          priority
+        />
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <motion.div
@@ -131,14 +139,6 @@ export default function Hero() {
               </div>
             </motion.div>
           </motion.div>
-          <Image
-            src="/lamp.png"
-            alt="Ilustração de uma Lâmpada"
-            width={1067}
-            height={911}
-            className="w-full h-auto"
-            priority
-          />
         </div>
       </div>
     </section>

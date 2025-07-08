@@ -76,7 +76,7 @@ export default function Services() {
             transition={{duration: 0.8, delay: 0.3}}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            O que <span className="bg-gradient-to-r text-gradient">Oferecemos</span>
+            O que <span className="text-gradient">Oferecemos</span>
           </motion.h2>
 
           <motion.p

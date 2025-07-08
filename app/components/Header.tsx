@@ -37,7 +37,7 @@ export default function Header() {
         <div className="flex items-center justify-between transition-all duration-100 h-16">
           {/* Logo */}
           <Image
-            src="/Logo.png"
+            src="/logo.png"
             alt="Lúmex Marketing Agency"
             width={120}
             height={40}
