@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Brain, TrendingUp, Target } from 'lucide-react';
+import RotatingText from "@/components/reactbits/TextAnimations/RotatingText/RotatingText";
 
 export default function Hero() {
   return (
@@ -31,11 +32,16 @@ export default function Hero() {
               transition={{ delay: 0.3 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
             >
-              Aumente suas{' '}
-              <span className="bg-gradient-to-r text-gradient">
+              Aumente suas
+              <br/>
+              <span className="text-gradient">
                 Vendas Online
-              </span>{' '}
-              e Presença Digital
+              </span>
+              {' '}e
+              <br/>
+              <span className="text-gradient">
+                Presença Digital
+              </span>
             </motion.h1>
 
             <motion.p
@@ -57,7 +63,7 @@ export default function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-8 py-4 font-semibold inline-flex items-center justify-center hover:shadow-lg hover:shadow-[#5b43e6]/25"
+                className="button-md group font-semibold inline-flex items-center justify-center"
               >
                 Quero Crescer no Digital
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -110,7 +116,7 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="bg-white/5 backdrop-blur-3xl rounded-3xl p-8 border border-white/10 shadow-2xl"
+                className="card rounded-3xl p-8 border border-white/10 shadow-2xl"
               >
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-2">
@@ -131,7 +137,7 @@ export default function Hero() {
                       initial={{ width: 0 }}
                       animate={{ width: '85%' }}
                       transition={{ duration: 2, delay: 1 }}
-                      className="h-2 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] rounded-full"
+                      className="h-2 gradient rounded-full"
                     />
                   </div>
                   
@@ -157,7 +163,7 @@ export default function Hero() {
                       initial={{ width: 0 }}
                       animate={{ width: '95%' }}
                       transition={{ duration: 2, delay: 2 }}
-                      className="h-2 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] rounded-full"
+                      className="h-2 gradient rounded-full"
                     />
                   </div>
                 </div>
@@ -174,7 +180,7 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="absolute -top-4 -right-4 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] p-4 rounded-2xl"
+                className="absolute -top-4 -right-4 gradient p-4 rounded-2xl"
               >
                 <Target className="h-8 w-8 text-white" />
               </motion.div>

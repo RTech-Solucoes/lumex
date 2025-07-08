@@ -3,17 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --gradient: linear-gradient(to right, #5b43e6, #f5503d);
+  --gradient-10: linear-gradient(to right, #5b43e610, #f5503d10)
 }
 
 @layer base {
@@ -81,6 +72,10 @@
   }
 }
 
+* {
+  letter-spacing: 0.05em;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -93,12 +88,61 @@ html {
   display: none;
 }
 
-.text-gradient {
-  background: linear-gradient(to right, #5b43e6, #f5503d);
-  background-clip: text;
-  color: transparent;
+.gradient {
+  background: var(--gradient);
+  @apply text-white
 }
 
-* {
-  letter-spacing: 0.05em;
+.hover\:gradient:hover {
+  @apply gradient;
+}
+
+.gradient\/10 {
+  background: var(--gradient-10);
+  @apply text-white
+}
+
+.hover\:gradient\/10:hover {
+  @apply gradient/10;
+}
+
+.text-gradient {
+  background: var(--gradient);
+  @apply bg-clip-text;
+  @apply text-transparent;
+
+  & span {
+    @apply text-gradient
+  }
+}
+
+.hover\:text-gradient:hover {
+  @apply text-gradient;
+}
+
+.group:hover {
+  & .group-hover\:text-gradient {
+    @apply text-gradient;
+  }
+}
+
+.button {
+  background: var(--gradient);
+  @apply text-white;
+
+}
+
+.button-md {
+  @apply button;
+  @apply px-8 py-4;
+}
+
+.button-sm {
+  @apply button;
+  @apply px-6 py-3;
+}
+
+.card {
+  @apply bg-white/5;
+  @apply backdrop-blur-3xl
 }

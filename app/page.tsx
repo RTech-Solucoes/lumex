@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <div className="relative bg-[#18191c] overflow-x-hidden overflow-y-auto scrollbar-hide max-h-screen">
+    <div id="page" className="relative bg-[#18191c] overflow-x-hidden overflow-y-auto scrollbar-hide max-h-screen">
       <div className="fixed inset-0 pointer-events-none">
         {/*<div id="1" className="absolute top-1/4 left-1/6 w-96 h-96 bg-[#5b43e6]/40 rounded-full blur-3xl shadow-[0_0_100px_rgba(91,67,230,0.6)]"/>*/}
         <div id="2" className="absolute top-1/2 right-1/4 w-80 h-80 bg-[#f5503d]/35 rounded-full blur-3xl shadow-[0_0_80px_rgba(245,80,61,0.5)]"/>

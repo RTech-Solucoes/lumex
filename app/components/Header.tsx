@@ -60,7 +60,7 @@ export default function Header() {
                   className="text-white/70 hover:text-white transition-all duration-200 relative group"
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] group-hover:w-full transition-all duration-100"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 gradient group-hover:w-full transition-all duration-100"></span>
                 </motion.a>
               ))}
             </div>
@@ -70,7 +70,7 @@ export default function Header() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="hidden md:block bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-6 py-2 font-medium hover:shadow-lg hover:shadow-[#5b43e6]/25 transition-all duration-100"
+            className="button-sm hidden md:block font-medium "
           >
             Fale Conosco
           </motion.button>
@@ -109,7 +109,7 @@ export default function Header() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full mt-4 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-6 py-2 font-medium"
+                  className="button-sm w-full mt-4 font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   Fale Conosco

@@ -91,15 +91,15 @@ export default function Services() {
                 transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
                 className="group h-full"
               >
-                <div className="bg-white/5 backdrop-blur-3xl rounded-3xl p-8 hover:border-[#5b43e6]/30 transition-all duration-100 hover:shadow-lg hover:shadow-[#5b43e6]/10 h-full flex flex-col">
+                <div className="card rounded-3xl p-8 h-full flex flex-col">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] rounded-full mb-6"
+                    className="inline-flex items-center justify-center w-16 h-16 gradient rounded-full mb-6"
                   >
                     <service.icon className="h-8 w-8 text-white" />
                   </motion.div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-[#5b43e6] group-hover:to-[#f5503d] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-100">
+                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-gradient transition-all duration-100">
                     {service.title}
                   </h3>
                   
@@ -116,7 +116,7 @@ export default function Services() {
                         transition={{ duration: 0.5, delay: 0.8 + index * 0.1 + featureIndex * 0.1 }}
                         className="flex items-center space-x-2"
                       >
-                        <div className="w-2 h-2 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] rounded-full"></div>
+                        <div className="w-2 h-2 gradient rounded-full"></div>
                         <span className="text-sm text-[#e8eafa]">{feature}</span>
                       </motion.div>
                     ))}
@@ -125,7 +125,7 @@ export default function Services() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group/btn mt-6 w-full bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-6 py-3 font-medium hover:shadow-lg hover:shadow-[#5b43e6]/25 transition-all duration-100 inline-flex items-center justify-center"
+                    className="button-sm group/btn mt-6 w-full font-medium inline-flex items-center justify-center"
                   >
                     Saiba Mais
                     <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -143,7 +143,7 @@ export default function Services() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="mt-20 text-center"
         >
-          <div className="bg-gradient-to-r from-[#5b43e6]/10 to-[#f5503d]/10 backdrop-blur-3xl rounded-3xl p-12">
+          <div className="gradient/10 backdrop-blur-3xl rounded-3xl p-12">
             <h3 className="text-3xl font-bold text-white mb-6">
               Pronto para Transformar seu Negócio?
             </h3>
@@ -154,7 +154,7 @@ export default function Services() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-8 py-4 font-semibold inline-flex items-center justify-center hover:shadow-lg hover:shadow-[#5b43e6]/25 transition-all duration-100"
+              className="button-md group font-semibold inline-flex items-center justify-center "
             >
               Agendar Conversa Gratuita
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

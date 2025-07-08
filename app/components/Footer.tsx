@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document?.querySelector("#page")?.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const quickLinks = [
@@ -65,7 +65,7 @@ export default function Footer() {
                     href={social.href}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-[#878899] hover:text-white hover:bg-gradient-to-r hover:from-[#5b43e6] hover:to-[#f5503d] transition-all duration-100"
+                    className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-[#878899] hover:text-white hover:gradient transition-all duration-100"
                     aria-label={social.label}
                   >
                     <social.icon className="h-5 w-5" />
@@ -89,7 +89,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-[#878899] hover:bg-gradient-to-r hover:from-[#5b43e6] hover:to-[#f5503d] hover:bg-clip-text hover:text-transparent transition-all duration-100 inline-flex items-center group"
+                    className="text-[#878899] hover:text-gradient transition-all duration-100 inline-flex items-center group"
                   >
                     <span className="w-0 h-0.5 bg-[#5b43e6] group-hover:w-4 transition-all duration-100 mr-0 group-hover:mr-2"></span>
                     {link.label}
@@ -111,7 +111,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
-                  <span className="text-[#878899] hover:bg-gradient-to-r hover:from-[#5b43e6] hover:to-[#f5503d] hover:bg-clip-text hover:text-transparent transition-all duration-100 cursor-pointer inline-flex items-center group">
+                  <span className="text-[#878899] hover:text-gradient transition-all duration-100 cursor-pointer inline-flex items-center group">
                     <span className="w-0 h-0.5 bg-[#5b43e6] group-hover:w-4 transition-all duration-100 mr-0 group-hover:mr-2"></span>
                     {service}
                   </span>
@@ -147,7 +147,7 @@ export default function Footer() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-6 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-6 py-3 font-medium inline-flex items-center hover:shadow-lg hover:shadow-[#5b43e6]/25 transition-all duration-100"
+              className="button-sm mt-6 font-medium inline-flex items-center "
             >
               Fale Conosco
               <ArrowUp className="ml-2 h-4 w-4 rotate-45" />
@@ -163,11 +163,10 @@ export default function Footer() {
             </p>
             
             <div className="flex items-center space-x-6 text-sm">
-              <a href="#" className="text-[#878899] hover:text-[#5b43e6] transition-colors"></a>
-              <a href="#" className="text-[#878899] hover:bg-gradient-to-r hover:from-[#5b43e6] hover:to-[#f5503d] hover:bg-clip-text hover:text-transparent transition-all duration-100">
+              <a href="#" className="text-[#878899] hover:text-gradient transition-all duration-100">
                 Política de Privacidade
               </a>
-              <a href="#" className="text-[#878899] hover:bg-gradient-to-r hover:from-[#5b43e6] hover:to-[#f5503d] hover:bg-clip-text hover:text-transparent transition-all duration-100">
+              <a href="#" className="text-[#878899] hover:text-gradient transition-all duration-100">
                 Termos de Uso
               </a>
             </div>
@@ -181,7 +180,7 @@ export default function Footer() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-100 z-40"
+          className="fixed bottom-8 right-8 w-12 h-12 gradient rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-100 z-40"
           aria-label="Voltar ao topo"
         >
           <ArrowUp className="h-5 w-5" />

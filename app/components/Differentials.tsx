@@ -100,15 +100,15 @@ export default function Differentials() {
                 transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
                 className="group"
               >
-                <div className="bg-white/5 backdrop-blur-3xl rounded-3xl p-8 hover:border-[#5b43e6]/30 transition-all duration-100 hover:shadow-lg hover:shadow-[#5b43e6]/10 h-full">
+                <div className="card rounded-3xl p-8 h-full">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] rounded-full mb-6"
+                    className="inline-flex items-center justify-center w-16 h-16 gradient rounded-full mb-6"
                   >
                     <differential.icon className="h-8 w-8 text-white" />
                   </motion.div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-[#5b43e6] group-hover:to-[#f5503d] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-100">
+                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-gradient transition-all duration-100">
                     {differential.title}
                   </h3>
                   
@@ -126,7 +126,7 @@ export default function Differentials() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="bg-gradient-to-r from-[#5b43e6]/10 to-[#f5503d]/10 backdrop-blur-3xl rounded-3xl p-8 md:p-12"
+          className="gradient/10 backdrop-blur-3xl rounded-3xl p-8 md:p-12"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -156,7 +156,7 @@ export default function Differentials() {
                       repeat: Infinity,
                       delay: index * 0.2,
                     }}
-                    className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#5b43e6] to-[#f5503d] rounded-full mb-4 mx-auto"
+                    className="inline-flex items-center justify-center w-16 h-16 gradient rounded-full mb-4 mx-auto"
                   >
                     <stat.icon className="h-8 w-8 text-white" />
                   </motion.div>

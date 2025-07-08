@@ -99,7 +99,7 @@ export default function Testimonials() {
       {/*      initial={{ opacity: 0, scale: 0.9 }}*/}
       {/*      animate={isInView ? { opacity: 1, scale: 1 } : {}}*/}
       {/*      transition={{ duration: 0.8, delay: 0.5 }}*/}
-      {/*      className="bg-white/5 backdrop-blur-3xl rounded-3xl p-8 md:p-12 relative overflow-hidden"*/}
+      {/*      className="card rounded-3xl p-8 md:p-12 relative overflow-hidden"*/}
       {/*    >*/}
       {/*      /!* Background decoration *!/*/}
       {/*      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#5b43e6]/10 to-[#f5503d]/10 rounded-full blur-3xl"></div>*/}
@@ -135,7 +135,7 @@ export default function Testimonials() {
       {/*              </div>*/}
       {/*            </div>*/}
       {/*            */}
-      {/*            <div className="bg-gradient-to-r from-[#5b43e6] to-[#f5503d] text-white px-6 py-3 rounded-full font-bold text-lg">*/}
+      {/*            <div className="px-6 py-3 rounded-full font-bold text-lg">*/}
       {/*              {testimonials[currentIndex].result}*/}
       {/*            </div>*/}
       {/*          </div>*/}
@@ -187,7 +187,7 @@ export default function Testimonials() {
       {/*    transition={{ duration: 0.8, delay: 0.8 }}*/}
       {/*    className="mt-20 text-center"*/}
       {/*  >*/}
-      {/*    <div className="bg-gradient-to-r from-[#5b43e6]/10 to-[#f5503d]/10 backdrop-blur-3xl rounded-3xl p-8">*/}
+      {/*    <div className="gradient/10 backdrop-blur-3xl rounded-3xl p-8">*/}
       {/*      <h3 className="text-2xl font-bold text-white mb-4">*/}
       {/*        Neuromarketing que gera resultados reais*/}
       {/*      </h3>*/}
