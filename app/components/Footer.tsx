@@ -81,7 +81,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            <h4 className="text-lg font-semibold text-foreground mb-6">
+            <h4 className="text-lg font-normal text-foreground mb-6">
               Links Rápidos
             </h4>
             <ul className="space-y-3">
@@ -105,7 +105,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h4 className="text-lg font-semibold text-foreground mb-6">
+            <h4 className="text-lg font-normal text-foreground mb-6">
               Serviços
             </h4>
             <ul className="space-y-3">
@@ -126,7 +126,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <h4 className="text-lg font-semibold text-foreground mb-6">
+            <h4 className="text-lg font-normal text-foreground mb-6">
               Contato
             </h4>
             <div className="space-y-4">

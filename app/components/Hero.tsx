@@ -63,7 +63,7 @@ export default function Hero() {
               transition={{ delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start text-xl"
             >
-              <button className="button-md group font-semibold inline-flex items-center justify-center"
+              <button className="button-md group font-normal inline-flex items-center justify-center"
               >
                 Quero Crescer no Digital
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"/>
@@ -71,7 +71,7 @@ export default function Hero() {
 
               <a
                 href="#sobre"
-                className="bg-transparent text-foreground px-8 py-4 font-semibold hover:backdrop-blur-3xl hover:bg-foreground/5"
+                className="bg-transparent text-foreground px-8 py-4 font-normal hover:backdrop-blur-3xl hover:bg-foreground/5"
               >
                 Conheça nosso trabalho
               </a>

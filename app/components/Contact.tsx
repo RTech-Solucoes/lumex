@@ -80,16 +80,6 @@ export default function Contact() {
           transition={{duration: 0.8}}
           className="text-center mb-16"
         >
-          <motion.div
-            initial={{opacity: 0, y: 20}}
-            animate={isInView ? {opacity: 1, y: 0} : {}}
-            transition={{duration: 0.6, delay: 0.2}}
-            className="inline-flex items-center px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 mb-6"
-          >
-            <MessageCircle className="h-5 w-5 text-primary mr-2"/>
-            <span className="text-sm text-foreground">Fale Conosco</span>
-          </motion.div>
-
           <motion.h2
             initial={{opacity: 0, y: 30}}
             animate={isInView ? {opacity: 1, y: 0} : {}}
@@ -126,7 +116,7 @@ export default function Contact() {
             transition={{duration: 0.8, delay: 0.5}}
           >
             <div className="card p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6">
+              <h3 className="text-2xl font-normal text-foreground mb-6">
                 Solicitar Estratégia Personalizada
               </h3>
 
@@ -137,7 +127,7 @@ export default function Contact() {
                   className="text-center py-8"
                 >
                   <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4"/>
-                  <h4 className="text-xl font-semibold text-foreground mb-2">
+                  <h4 className="text-xl font-normal text-foreground mb-2">
                     Mensagem Enviada!
                   </h4>
                   <p className="text-muted">
@@ -212,7 +202,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="button-md w-full font-semibold inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="button-md w-full font-normal inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-foreground"/>
@@ -254,7 +244,7 @@ export default function Contact() {
                       </motion.div>
 
                       <div className="flex-1">
-                        <h4 className="text-lg font-semibold text-foreground mb-1 transition-all duration-100">
+                        <h4 className="text-lg font-normal text-foreground mb-1 transition-all duration-100">
                           {info.title}
                         </h4>
                         <p className="text-muted text-sm mb-2">

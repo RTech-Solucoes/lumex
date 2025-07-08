@@ -57,15 +57,6 @@ export default function Differentials() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 mb-6"
-          >
-            <CheckCircle className="h-5 w-5 text-primary mr-2" />
-            <span className="text-sm text-foreground">Nossos Diferenciais</span>
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -132,7 +123,7 @@ export default function Differentials() {
           className="card-gradient p-8 md:p-12"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
+            <h3 className="text-3xl font-normal text-foreground mb-4">
               Números que Comprovam nossa Excelência
             </h3>
             <p className="text-muted text-lg">
@@ -164,7 +155,7 @@ export default function Differentials() {
                     <stat.icon className="h-8 w-8 text-foreground" />
                   </motion.div>
 
-                  <div className="text-3xl font-bold text-foreground mb-2">
+                  <div className="text-3xl font-normal text-foreground mb-2">
                     {stat.number}
                   </div>
 

@@ -61,15 +61,6 @@ export default function Services() {
           transition={{duration: 0.8}}
           className="text-center mb-16"
         >
-          <motion.div
-            initial={{opacity: 0, y: 20}}
-            animate={isInView ? {opacity: 1, y: 0} : {}}
-            transition={{duration: 0.6, delay: 0.2}}
-            className="inline-flex items-center px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 mb-6"
-          >
-            <Target className="h-5 w-5 text-primary mr-2"/>
-            <span className="text-sm text-foreground">Nossos Serviços</span>
-          </motion.div>
 
           <motion.h2
             initial={{opacity: 0, y: 30}}
@@ -130,14 +121,14 @@ export default function Services() {
           className="mt-20 text-center"
         >
           <div className="card-gradient p-12">
-            <h3 className="text-3xl font-bold text-foreground mb-6">
+            <h3 className="text-3xl font-normal text-foreground mb-6">
               Pronto para Transformar seu Negócio?
             </h3>
             <p className="text-xl text-muted max-w-2xl mx-auto mb-8">
               Descubra como o neuromarketing pode revolucionar seus resultados.
               Agende uma conversa gratuita com nossos especialistas.
             </p>
-            <button className="button-md group font-semibold inline-flex items-center justify-center ">
+            <button className="button-md group font-normal inline-flex items-center justify-center ">
               Agendar Conversa Gratuita
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"/>
             </button>

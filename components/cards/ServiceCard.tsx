@@ -33,7 +33,7 @@ export default function ServiceCard({
         </motion.div>
 
         <h3
-          className="w-fit text-xl font-semibold text-foreground mb-4 group-hover:text-gradient transition-all duration-100">
+          className="w-fit text-xl font-normal text-foreground mb-4 group-hover:text-gradient transition-all duration-100">
           {title}
         </h3>
 
@@ -50,7 +50,7 @@ export default function ServiceCard({
               transition={{duration: 0.5, delay: 0.8 + index * 0.1 + featureIndex * 0.1}}
               className="flex items-center space-x-2"
             >
-              <span className="text-gradient text-lg font-bold"> {'-'} </span>
+              <span className="text-gradient text-lg font-normal"> {'-'} </span>
               <span className="text-lg text-foreground">{feature}</span>
             </motion.div>
           ))}

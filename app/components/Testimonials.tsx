@@ -78,7 +78,7 @@ export default function Testimonials() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl md:text-5xl font-bold text-foreground mb-6"
+            className="text-4xl md:text-5xl font-normal text-foreground mb-6"
           >
             Empresas que <span className="text-gradient">Confiam</span> na Lúmex
           </motion.h2>
@@ -127,7 +127,7 @@ export default function Testimonials() {
 
                 <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
                   <div className="text-center md:text-left">
-                    <div className="text-lg font-semibold text-foreground">
+                    <div className="text-lg font-normal text-foreground">
                       {testimonials[currentIndex].name}
                     </div>
                     <div className="text-muted">
@@ -135,7 +135,7 @@ export default function Testimonials() {
                     </div>
                   </div>
 
-                  <div className="px-6 py-3 rounded-full font-bold text-lg">
+                  <div className="px-6 py-3 rounded-full font-normal text-lg">
                     {testimonials[currentIndex].result}
                   </div>
                 </div>
@@ -188,7 +188,7 @@ export default function Testimonials() {
           className="mt-20 text-center"
         >
           <div className="card-gradient p-8">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
+            <h3 className="text-2xl font-normal text-foreground mb-4">
               Neuromarketing que gera resultados reais
             </h3>
             <p className="text-muted text-lg">
