@@ -13,14 +13,6 @@ export default function Hero() {
       className="relative h-screen flex items-center justify-center overflow-hidden bg-transparent"
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Image
-          src="/lamp.png"
-          alt="Ilustração de uma Lâmpada"
-          width={1067}
-          height={911}
-          className="absolute -top-40 -right-24 w-4/5 h-auto z-10"
-          priority
-        />
         <div className="grid lg:grid-cols-2 gap-12 items-center z-50">
           {/* Left Column - Content */}
           <motion.div
@@ -36,7 +28,7 @@ export default function Hero() {
               className="inline-flex items-center px-4 py-2 bg-[#5b43e6]/10 backdrop-blur-sm rounded-full border border-[#5b43e6]/20 mb-6"
             >
               <Brain className="h-5 w-5 text-[#5b43e6] mr-2" />
-              <span className="text-sm text-[#e8eafa]">Agência de Neuromarketing</span>
+              <span className="text-sm text-white">Agência de Neuromarketing</span>
             </motion.div>
 
             <motion.h1
@@ -140,6 +132,14 @@ export default function Hero() {
             </motion.div>
           </motion.div>
         </div>
+        <Image
+          src="/lamp.png"
+          alt="Ilustração de uma Lâmpada"
+          width={1067}
+          height={911}
+          className="absolute -top-40 -right-24 w-4/5 h-auto z-10"
+          priority
+        />
       </div>
     </section>
   );

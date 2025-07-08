@@ -87,7 +87,7 @@ export default function Contact() {
             className="inline-flex items-center px-4 py-2 bg-[#5b43e6]/10 backdrop-blur-sm rounded-full border border-[#5b43e6]/20 mb-6"
           >
             <MessageCircle className="h-5 w-5 text-[#5b43e6] mr-2"/>
-            <span className="text-sm text-[#e8eafa]">Fale Conosco</span>
+            <span className="text-sm text-white">Fale Conosco</span>
           </motion.div>
 
           <motion.h2
@@ -147,7 +147,7 @@ export default function Contact() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-[#e8eafa] mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                       Nome *
                     </label>
                     <input
@@ -163,7 +163,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-[#e8eafa] mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                       E-mail *
                     </label>
                     <input
@@ -179,7 +179,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-[#e8eafa] mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
                       Telefone *
                     </label>
                     <input
@@ -195,7 +195,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-[#e8eafa] mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                       Mensagem
                     </label>
                     <textarea
@@ -260,7 +260,7 @@ export default function Contact() {
                         <p className="text-[#aaaaaa] text-sm mb-2">
                           {info.description}
                         </p>
-                        <p className="text-[#e8eafa] font-medium">
+                        <p className="text-white font-medium">
                           {info.value}
                         </p>
                       </div>

@@ -71,7 +71,7 @@ export default function Testimonials() {
             className="inline-flex items-center px-4 py-2 bg-[#5b43e6]/10 backdrop-blur-sm rounded-full border border-[#5b43e6]/20 mb-6"
           >
             <Star className="h-5 w-5 text-[#5b43e6] mr-2" />
-            <span className="text-sm text-[#e8eafa]">Resultados Reais</span>
+            <span className="text-sm text-white">Resultados Reais</span>
           </motion.div>
 
           <motion.h2

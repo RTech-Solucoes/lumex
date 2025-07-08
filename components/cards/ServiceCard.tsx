@@ -51,7 +51,7 @@ export default function ServiceCard({
               className="flex items-center space-x-2"
             >
               <span className="text-gradient text-lg font-bold"> {'-'} </span>
-              <span className="text-lg text-[#e8eafa]">{feature}</span>
+              <span className="text-lg text-white">{feature}</span>
             </motion.div>
           ))}
         </div>

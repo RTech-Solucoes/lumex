@@ -64,7 +64,7 @@ export default function Differentials() {
             className="inline-flex items-center px-4 py-2 bg-[#5b43e6]/10 backdrop-blur-sm rounded-full border border-[#5b43e6]/20 mb-6"
           >
             <CheckCircle className="h-5 w-5 text-[#5b43e6] mr-2" />
-            <span className="text-sm text-[#e8eafa]">Nossos Diferenciais</span>
+            <span className="text-sm text-white">Nossos Diferenciais</span>
           </motion.div>
 
           <motion.div
@@ -75,7 +75,7 @@ export default function Differentials() {
           >
             Por que escolher a
             <Image
-              src="/Logo.png"
+              src="/logo.png"
               alt="Lúmex Marketing Agency"
               width={120}
               height={40}
