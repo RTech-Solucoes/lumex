@@ -48,22 +48,25 @@ export default function Contact() {
       title: "WhatsApp",
       description: "Fale diretamente com nossa equipe",
       value: "+55 11 99999-9999",
-      action: "Enviar mensagem"
     },
     {
       icon: Mail,
       title: "E-mail",
       description: "Para dúvidas e informações",
       value: "contato@lumex.com.br",
-      action: "Enviar e-mail"
     },
     {
       icon: Phone,
       title: "Telefone",
       description: "Atendimento comercial",
       value: "+55 11 3333-3333",
-      action: "Ligar agora"
-    }
+    },
+    {
+      icon: MapPin,
+      title: "Localização",
+      description: "Atendimento presencial e online",
+      value: "Uberlândia - MG, Brasil",
+    },
   ];
 
   return (
@@ -99,7 +102,7 @@ export default function Contact() {
             initial={{opacity: 0, y: 30}}
             animate={isInView ? {opacity: 1, y: 0} : {}}
             transition={{duration: 0.8, delay: 0.4}}
-            className="text-xl text-[#878899] max-w-3xl mx-auto"
+            className="text-xl text-[#aaaaaa] max-w-3xl mx-auto"
           >
             Pronto para sair do comum e levar sua loja física para o digital com estratégias de neuromarketing?
             Fale agora com nossos especialistas e veja como podemos ajudar você a aumentar suas vendas online e offline.
@@ -113,7 +116,7 @@ export default function Contact() {
             animate={isInView ? {opacity: 1, x: 0} : {}}
             transition={{duration: 0.8, delay: 0.5}}
           >
-            <div className="card rounded-3xl p-8">
+            <div className="card p-8">
               <h3 className="text-2xl font-bold text-white mb-6">
                 Solicitar Estratégia Personalizada
               </h3>
@@ -128,7 +131,7 @@ export default function Contact() {
                   <h4 className="text-xl font-semibold text-white mb-2">
                     Mensagem Enviada!
                   </h4>
-                  <p className="text-[#878899]">
+                  <p className="text-[#aaaaaa]">
                     Entraremos em contato em breve para discutir sua estratégia personalizada.
                   </p>
                 </motion.div>
@@ -145,7 +148,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 rounded-lg text-white placeholder-[#878899] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100"
+                      className="w-full px-4 py-3 bg-white/5 text-white placeholder-[#aaaaaa] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100"
                       placeholder="Seu nome completo"
                     />
                   </div>
@@ -161,7 +164,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 rounded-lg text-white placeholder-[#878899] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100"
+                      className="w-full px-4 py-3 bg-white/5 text-white placeholder-[#aaaaaa] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100"
                       placeholder="seu@email.com"
                     />
                   </div>
@@ -177,7 +180,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 rounded-lg text-white placeholder-[#878899] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100"
+                      className="w-full px-4 py-3 bg-white/5 text-white placeholder-[#aaaaaa] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100"
                       placeholder="(11) 99999-9999"
                     />
                   </div>
@@ -191,17 +194,15 @@ export default function Contact() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      rows={4}
-                      className="w-full px-4 py-3 bg-white/5 rounded-lg text-white placeholder-[#878899] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100 resize-none"
+                      rows={5}
+                      className="w-full px-4 py-3 bg-white/5 text-white placeholder-[#aaaaaa] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100 resize-none"
                       placeholder="Conte-nos mais sobre seu negócio e objetivos..."
                     />
                   </div>
 
-                  <motion.button
+                  <button
                     type="submit"
                     disabled={isSubmitting}
-                    whileHover={{scale: 1.05}}
-                    whileTap={{scale: 0.95}}
                     className="button-md w-full font-semibold inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
@@ -212,7 +213,7 @@ export default function Contact() {
                         <ArrowRight className="ml-2 h-5 w-5"/>
                       </>
                     )}
-                  </motion.button>
+                  </button>
                 </form>
               )}
             </div>
@@ -223,7 +224,7 @@ export default function Contact() {
             initial={{opacity: 0, x: 50}}
             animate={isInView ? {opacity: 1, x: 0} : {}}
             transition={{duration: 0.8, delay: 0.6}}
-            className="flex flex-col justify-between"
+            className="flex flex-col justify-between gap-12"
           >
             {contactInfo.map((info, index) => {
               return (
@@ -234,7 +235,7 @@ export default function Contact() {
                   transition={{duration: 0.8, delay: 0.7 + index * 0.1}}
                   className="group"
                 >
-                  <div className="card rounded-3xl p-6 ">
+                  <div className="card p-6 ">
                     <div className="flex items-start space-x-4">
                       <motion.div
                         whileHover={{scale: 1.1, rotate: 5}}
@@ -247,7 +248,7 @@ export default function Contact() {
                         <h4 className="text-lg font-semibold text-white mb-1 transition-all duration-100">
                           {info.title}
                         </h4>
-                        <p className="text-[#878899] text-sm mb-2">
+                        <p className="text-[#aaaaaa] text-sm mb-2">
                           {info.description}
                         </p>
                         <p className="text-[#e8eafa] font-medium">
@@ -261,24 +262,6 @@ export default function Contact() {
             })}
 
             {/* Location */}
-            <motion.div
-              initial={{opacity: 0, y: 30}}
-              animate={isInView ? {opacity: 1, y: 0} : {}}
-              transition={{duration: 0.8, delay: 1}}
-              className="gradient/10 backdrop-blur-3xl rounded-3xl p-6"
-            >
-              <div className="flex items-center space-x-3 mb-4">
-                <MapPin className="h-6 w-6 text-[#5b43e6]"/>
-                <h4 className="text-lg font-semibold text-white">
-                  Localização
-                </h4>
-              </div>
-              <p className="text-[#878899]">
-                Uberlândia, MG - Brasil
-                <br/>
-                Atendimento presencial e online
-              </p>
-            </motion.div>
           </motion.div>
         </div>
       </div>

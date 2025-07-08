@@ -52,7 +52,7 @@ export default function Footer() {
               />
             </div>
             
-            <p className="text-[#878899] leading-relaxed">
+            <p className="text-[#aaaaaa] leading-relaxed">
               Agência de neuromarketing especializada em transformar empresas através da ciência 
               do comportamento aplicada ao marketing digital.
             </p>
@@ -65,7 +65,7 @@ export default function Footer() {
                     href={social.href}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-[#878899] hover:text-white hover:gradient transition-all duration-100"
+                    className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-[#aaaaaa] hover:text-white hover:gradient transition-all duration-100"
                     aria-label={social.label}
                   >
                     <social.icon className="h-5 w-5" />
@@ -89,7 +89,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-[#878899] hover:text-gradient transition-all duration-100 inline-flex items-center group"
+                    className="text-[#aaaaaa] hover:text-gradient transition-all duration-100 inline-flex items-center group"
                   >
                     <span className="w-0 h-0.5 bg-[#5b43e6] group-hover:w-4 transition-all duration-100 mr-0 group-hover:mr-2"></span>
                     {link.label}
@@ -111,7 +111,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
-                  <span className="text-[#878899] hover:text-gradient transition-all duration-100 cursor-pointer inline-flex items-center group">
+                  <span className="text-[#aaaaaa] hover:text-gradient transition-all duration-100 cursor-pointer inline-flex items-center group">
                     <span className="w-0 h-0.5 bg-[#5b43e6] group-hover:w-4 transition-all duration-100 mr-0 group-hover:mr-2"></span>
                     {service}
                   </span>
@@ -132,41 +132,37 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-[#5b43e6]" />
-                <span className="text-[#878899]">+55 11 3333-3333</span>
+                <span className="text-[#aaaaaa]">+55 11 3333-3333</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MessageCircle className="h-5 w-5 text-[#5b43e6]" />
-                <span className="text-[#878899]">+55 11 99999-9999</span>
+                <span className="text-[#aaaaaa]">+55 11 99999-9999</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-[#5b43e6]" />
-                <span className="text-[#878899]">contato@lumex.com.br</span>
+                <span className="text-[#aaaaaa]">contato@lumex.com.br</span>
               </div>
             </div>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="button-sm mt-6 font-medium inline-flex items-center "
-            >
+            <button className="button-sm mt-6 font-medium inline-flex items-center">
               Fale Conosco
               <ArrowUp className="ml-2 h-4 w-4 rotate-45" />
-            </motion.button>
+            </button>
           </motion.div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-[#878899] text-sm">
+            <p className="text-[#aaaaaa] text-sm">
               © 2024 Lúmex Marketing Agency. Todos os direitos reservados.
             </p>
             
             <div className="flex items-center space-x-6 text-sm">
-              <a href="#" className="text-[#878899] hover:text-gradient transition-all duration-100">
+              <a href="#" className="text-[#aaaaaa] hover:text-gradient transition-all duration-100">
                 Política de Privacidade
               </a>
-              <a href="#" className="text-[#878899] hover:text-gradient transition-all duration-100">
+              <a href="#" className="text-[#aaaaaa] hover:text-gradient transition-all duration-100">
                 Termos de Uso
               </a>
             </div>
@@ -174,17 +170,13 @@ export default function Footer() {
         </div>
 
         {/* Back to Top Button */}
-        <motion.button
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+        <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 gradient rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-100 z-40"
+          className="button-glass fixed bottom-8 right-8 w-12 h-12 bg-white/5 backdrop-blur-3xl rounded-full flex items-center justify-center shadow-lg hover:shadow-xl z-40"
           aria-label="Voltar ao topo"
         >
           <ArrowUp className="h-5 w-5" />
-        </motion.button>
+        </button>
       </div>
     </footer>
   );

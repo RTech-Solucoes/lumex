@@ -20,8 +20,8 @@ export default function Header() {
 
   const navItems = [
     { href: '#inicio', label: 'Início' },
-    { href: '#servicos', label: 'Serviços' },
     { href: '#sobre', label: 'Sobre' },
+    { href: '#servicos', label: 'Serviços' },
     // { href: '#resultados', label: 'Resultados' },
     { href: '#contato', label: 'Contato' }
   ];
@@ -30,24 +30,20 @@ export default function Header() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-100 backdrop-blur-3xl"
+      style={{maxWidth: "calc(100vw - 32px)"}}
+      className="mx-auto fixed top-0 left-0 right-0 z-50 transition-all duration-100 backdrop-blur-3xl"
     >
       <div className="max-w-7xl mx-auto transition-all duration-100 px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between transition-all duration-100 h-16">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center"
-          >
-            <Image
-              src="/Logo.png"
-              alt="Lúmex Marketing Agency"
-              width={120}
-              height={40}
-              className="h-10 w-auto"
-              priority
-            />
-          </motion.div>
+          <Image
+            src="/Logo.png"
+            alt="Lúmex Marketing Agency"
+            width={120}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
@@ -57,7 +53,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   whileHover={{ y: -2 }}
-                  className="text-white/70 hover:text-white transition-all duration-200 relative group"
+                  className="text-xl text-[#aaaaaa] hover:text-white transition-all duration-200 relative group"
                 >
                   {item.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 gradient group-hover:w-full transition-all duration-100"></span>
@@ -67,23 +63,17 @@ export default function Header() {
           </div>
 
           {/* CTA Button */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="button-sm hidden md:block font-medium "
-          >
+          <button className="button-sm hidden md:block font-medium">
             Fale Conosco
-          </motion.button>
+          </button>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-white/70 hover:text-white focus:outline-none"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="button-transparent md:hidden text-[#aaaaaa] hover:text-white focus:outline-none"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
@@ -93,27 +83,25 @@ export default function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-[#18191c]/90 backdrop-blur-3xl border-t border-white/10"
+              className="md:hidden backdrop-blur-3xl border-t border-white/10"
             >
-              <div className="px-2 pt-2 pb-3 space-y-1">
+              <div className="pt-3 space-y-3">
                 {navItems.map((item) => (
                   <a
                     key={item.href}
                     href={item.href}
-                    className="text-white/70 hover:text-white block px-3 py-2 transition-colors duration-200"
+                    className="text-[#aaaaaa] hover:text-white block py-2 transition-colors duration-200"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
                   </a>
                 ))}
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <button
                   className="button-sm w-full mt-4 font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   Fale Conosco
-                </motion.button>
+                </button>
               </div>
             </motion.div>
           )}

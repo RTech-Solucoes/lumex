@@ -3,31 +3,38 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Rocket, Target, Brain, CheckCircle, BarChart3, Users } from 'lucide-react';
+import {Rocket, Target, Brain, CheckCircle, BarChart3, Users, LucideIcon} from 'lucide-react';
 import Image from "next/image";
+import DifferentialCard from "@/components/cards/DifferentialCard";
+
+interface Differential {
+  Icon: LucideIcon;
+  title: string;
+  description: string;
+}
 
 export default function Differentials() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const differentials = [
+  const differentials: Differential[] = [
     {
-      icon: Rocket,
+      Icon: Rocket,
       title: "Agência 100% focada em neuromarketing",
       description: "Somos especialistas em aplicar ciência do comportamento para resultados extraordinários."
     },
     {
-      icon: Target,
-      title: "Estratégias exclusivas, personalizadas",
+      Icon: Target,
+      title: "Estratégias exclusivas e personalizadas",
       description: "Cada negócio é único. Criamos estratégias sob medida para suas necessidades específicas."
     },
     {
-      icon: Brain,
+      Icon: Brain,
       title: "Ciência aplicada para vender mais",
       description: "Usamos neurociência para entender o cliente e criar campanhas que realmente convertem."
     },
     {
-      icon: CheckCircle,
+      Icon: CheckCircle,
       title: "Resultados mensuráveis",
       description: "Atendimento próximo, relatórios claros e resultados que você pode medir e comprovar."
     }
@@ -64,7 +71,7 @@ export default function Differentials() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex items-start justify-center mb-6 gap-4"
+            className="flex flex-col md:flex-row items-start justify-center mb-6 gap-4"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mt-[6px]">
               Por que Escolher a
@@ -83,42 +90,40 @@ export default function Differentials() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-[#878899] max-w-3xl mx-auto"
+            className="text-xl text-[#aaaaaa] max-w-3xl mx-auto"
           >
             Conheça os diferenciais que fazem da Lúmex a escolha certa para transformar seu negócio
           </motion.p>
         </motion.div>
 
         {/* Differentials Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-20">
-          {differentials.map((differential, index) => {
-            return (
-              <motion.div
-                key={differential.title}
-                initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
-                className="group"
-              >
-                <div className="card rounded-3xl p-8 h-full">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="inline-flex items-center justify-center w-16 h-16 gradient rounded-full mb-6"
-                  >
-                    <differential.icon className="h-8 w-8 text-white" />
-                  </motion.div>
-                  
-                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-gradient transition-all duration-100">
-                    {differential.title}
-                  </h3>
-                  
-                  <p className="text-[#878899] leading-relaxed">
-                    {differential.description}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
+        <div className="flex flex-col gap-8 mb-20">
+          <div
+            style={{ gridTemplateColumns: '2fr 1fr'}}
+            className="grid gap-8"
+          >
+            {differentials.slice(0, 2).map((differential, index) =>
+              <DifferentialCard
+                key={index}
+                {...differential}
+                isInView={isInView}
+                index={index}
+              />
+            )}
+          </div>
+          <div
+            style={{ gridTemplateColumns: '1fr 2fr'}}
+            className="grid gap-8"
+          >
+            {differentials.slice(2, 4).map((differential, index) =>
+              <DifferentialCard
+                key={index}
+                {...differential}
+                isInView={isInView}
+                index={index}
+              />
+            )}
+          </div>
         </div>
 
         {/* Stats Section */}
@@ -126,13 +131,13 @@ export default function Differentials() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="gradient/10 backdrop-blur-3xl rounded-3xl p-8 md:p-12"
+          className="card-gradient p-8 md:p-12"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">
               Números que Comprovam nossa Excelência
             </h3>
-            <p className="text-[#878899] text-lg">
+            <p className="text-[#aaaaaa] text-lg">
               Resultados que falam por si só
             </p>
           </div>
@@ -160,12 +165,12 @@ export default function Differentials() {
                   >
                     <stat.icon className="h-8 w-8 text-white" />
                   </motion.div>
-                  
+
                   <div className="text-3xl font-bold text-white mb-2">
                     {stat.number}
                   </div>
-                  
-                  <div className="text-sm text-[#878899]">
+
+                  <div className="text-sm text-[#aaaaaa]">
                     {stat.label}
                   </div>
                 </motion.div>

@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --gradient: linear-gradient(to right, #5b43e6, #f5503d);
-  --gradient-10: linear-gradient(to right, #5b43e610, #f5503d10)
+  --gradient-to-r: linear-gradient(to right, #5b43e6, #f5503d);
+  --gradient-to-r-10: linear-gradient(to right, #5b43e610, #f5503d0d);
+  --gradient-to-b: linear-gradient(to bottom, #5b43e6, #f5503d);
+  --gradient-to-b-10: linear-gradient(to bottom, #5b43e610, #f5503d0d);
 }
 
 @layer base {
@@ -74,10 +76,37 @@
 
 * {
   letter-spacing: 0.05em;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }
 
-html {
-  scroll-behavior: smooth;
+.custom-scrollbar {
+  padding-left: 16px;
+
+  &::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply
+    bg-white/20
+    rounded-xl
+    border-4
+    border-solid
+    border-transparent
+    bg-clip-content
+    backdrop-blur-3xl;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
 }
 
 .scrollbar-hide {
@@ -89,7 +118,7 @@ html {
 }
 
 .gradient {
-  background: var(--gradient);
+  background: var(--gradient-to-r);
   @apply text-white
 }
 
@@ -98,7 +127,7 @@ html {
 }
 
 .gradient\/10 {
-  background: var(--gradient-10);
+  background: var(--gradient-to-r-10);
   @apply text-white
 }
 
@@ -107,9 +136,10 @@ html {
 }
 
 .text-gradient {
-  background: var(--gradient);
-  @apply bg-clip-text;
-  @apply text-transparent;
+  background: var(--gradient-to-r);
+  @apply
+  bg-clip-text
+  text-transparent;
 
   & span {
     @apply text-gradient
@@ -126,23 +156,48 @@ html {
   }
 }
 
-.button {
-  background: var(--gradient);
-  @apply text-white;
+button {
+  background: var(--gradient-to-r) !important;
+  @apply
+  text-white
+  transition-all
+  duration-100;
+}
 
+button:hover {
+  @apply scale-105;
+}
+
+button:active {
+  @apply scale-95;
 }
 
 .button-md {
-  @apply button;
   @apply px-8 py-4;
 }
 
 .button-sm {
-  @apply button;
   @apply px-6 py-3;
 }
 
+.button-transparent {
+  background: none !important;
+}
+
+.button-glass {
+  background: #ffffff0D !important;
+  @apply backdrop-blur-3xl;
+}
+
 .card {
-  @apply bg-white/5;
-  @apply backdrop-blur-3xl
+  @apply
+  bg-white/5
+  backdrop-blur-3xl
+  cursor-pointer
+}
+
+.card-gradient {
+  @apply
+  card
+  gradient/10
 }
