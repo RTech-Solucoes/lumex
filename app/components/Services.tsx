@@ -5,6 +5,7 @@ import {useInView} from 'framer-motion';
 import {useRef} from 'react';
 import {Brain, Target, Search, PenTool, Mail, ArrowRight, LucideIcon} from 'lucide-react';
 import ServiceCard from '@/components/cards/ServiceCard';
+import Image from "next/image";
 
 interface Service {
   Icon: LucideIcon;
@@ -74,9 +75,17 @@ export default function Services() {
             initial={{opacity: 0, y: 30}}
             animate={isInView ? {opacity: 1, y: 0} : {}}
             transition={{duration: 0.8, delay: 0.3}}
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            className="flex justify-center items-start text-4xl md:text-5xl font-normal text-white mb-6"
           >
-            O que <span className="text-gradient">Oferecemos</span>
+            O que oferecemos
+            <Image
+              src="/icone.png"
+              alt="Lúmex Marketing Agency"
+              width={120}
+              height={40}
+              className="h-4 mt-1 md:mt-0 md:h-6 w-auto"
+              priority
+            />
           </motion.h2>
 
           <motion.p

@@ -57,18 +57,17 @@ export default function About() {
             initial={{opacity: 0, y: 30}}
             animate={isInView ? {opacity: 1, y: 0} : {}}
             transition={{duration: 0.8, delay: 0.3}}
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            className="flex justify-center items-start text-4xl md:text-5xl font-normal text-white mb-6"
           >
-            <span>Quem </span>
-            <span className="text-gradient">Somos</span>
-            {/*<Image*/}
-            {/*  src="/icone.png"*/}
-            {/*  alt="Lúmex Marketing Agency"*/}
-            {/*  width={120}*/}
-            {/*  height={40}*/}
-            {/*  className="h-10 md:h-12 w-auto"*/}
-            {/*  priority*/}
-            {/*/>*/}
+            Quem somos
+            <Image
+              src="/icone.png"
+              alt="Lúmex Marketing Agency"
+              width={120}
+              height={40}
+              className="h-4 mt-1 md:mt-0 md:h-6 w-auto"
+              priority
+            />
           </motion.h2>
 
           <motion.p

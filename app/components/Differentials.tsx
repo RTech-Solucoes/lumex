@@ -71,17 +71,15 @@ export default function Differentials() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-row flex-wrap md:flex-row items-start justify-center mb-6 gap-4"
+            className="flex gap-4 justify-center items-start text-4xl md:text-5xl font-normal text-white mb-6"
           >
-            <h2 className="text-4xl whitespace-nowrap md:text-5xl font-bold text-white mt-[8px] md:mt-[9px]">
-              Por que Escolher a
-            </h2>
+            Por que escolher a
             <Image
-              src="/logo.png"
+              src="/Logo.png"
               alt="Lúmex Marketing Agency"
               width={120}
               height={40}
-              className="h-10 md:h-12 w-auto"
+              className="h-8 md:h-10 md:-mt-[1px] w-auto"
               priority
             />
           </motion.div>
