@@ -45,14 +45,14 @@ export default function Footer() {
             <div className="flex items-center">
               <Image
                 src="/logo.png"
-                alt="Lúmex Marketing Agency"
+                alt="Lúmex Agência de Marketing"
                 width={120}
                 height={40}
                 className="h-10 w-auto"
               />
             </div>
             
-            <p className="text-[#aaaaaa] leading-relaxed">
+            <p className="text-muted leading-relaxed">
               Agência de neuromarketing especializada em transformar empresas através da ciência 
               do comportamento aplicada ao marketing digital.
             </p>
@@ -65,7 +65,7 @@ export default function Footer() {
                     href={social.href}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-[#aaaaaa] hover:text-white hover:gradient transition-all duration-100"
+                    className="w-10 h-10 bg-foreground/10 backdrop-blur-sm rounded-full flex items-center justify-center text-muted hover:text-foreground hover:gradient transition-all duration-100"
                     aria-label={social.label}
                   >
                     <social.icon className="h-5 w-5" />
@@ -81,7 +81,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            <h4 className="text-lg font-semibold text-white mb-6">
+            <h4 className="text-lg font-semibold text-foreground mb-6">
               Links Rápidos
             </h4>
             <ul className="space-y-3">
@@ -89,9 +89,9 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-[#aaaaaa] hover:text-gradient transition-all duration-100 inline-flex items-center group"
+                    className="text-muted hover:text-gradient transition-all duration-100 inline-flex items-center group"
                   >
-                    <span className="w-0 h-0.5 bg-[#5b43e6] group-hover:w-4 transition-all duration-100 mr-0 group-hover:mr-2"></span>
+                    <span className="w-0 h-0.5 bg-primary group-hover:w-4 transition-all duration-100 mr-0 group-hover:mr-2"></span>
                     {link.label}
                   </a>
                 </li>
@@ -105,14 +105,14 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h4 className="text-lg font-semibold text-white mb-6">
+            <h4 className="text-lg font-semibold text-foreground mb-6">
               Serviços
             </h4>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
-                  <span className="text-[#aaaaaa] hover:text-gradient transition-all duration-100 cursor-pointer inline-flex items-center group">
-                    <span className="w-0 h-0.5 bg-[#5b43e6] group-hover:w-4 transition-all duration-100 mr-0 group-hover:mr-2"></span>
+                  <span className="text-muted hover:text-gradient transition-all duration-100 cursor-pointer inline-flex items-center group">
+                    <span className="w-0 h-0.5 bg-primary group-hover:w-4 transition-all duration-100 mr-0 group-hover:mr-2"></span>
                     {service}
                   </span>
                 </li>
@@ -126,21 +126,21 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <h4 className="text-lg font-semibold text-white mb-6">
+            <h4 className="text-lg font-semibold text-foreground mb-6">
               Contato
             </h4>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-[#5b43e6]" />
-                <span className="text-[#aaaaaa]">+55 11 3333-3333</span>
+                <Phone className="h-5 w-5 text-primary" />
+                <span className="text-muted">+55 11 3333-3333</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MessageCircle className="h-5 w-5 text-[#5b43e6]" />
-                <span className="text-[#aaaaaa]">+55 11 99999-9999</span>
+                <MessageCircle className="h-5 w-5 text-primary" />
+                <span className="text-muted">+55 11 99999-9999</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-[#5b43e6]" />
-                <span className="text-[#aaaaaa]">contato@lumex.com.br</span>
+                <Mail className="h-5 w-5 text-primary" />
+                <span className="text-muted">contato@agencialumex.com.br</span>
               </div>
             </div>
 
@@ -152,17 +152,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8">
+        <div className="border-t border-foreground/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-[#aaaaaa] text-sm">
-              © 2024 Lúmex Marketing Agency. Todos os direitos reservados.
+            <p className="text-muted text-sm">
+              © 2024 Lúmex Agência de Marketing. Todos os direitos reservados.
             </p>
             
             <div className="flex items-center space-x-6 text-sm">
-              <a href="#" className="text-[#aaaaaa] hover:text-gradient transition-all duration-100">
+              <a href="#" className="text-muted hover:text-gradient transition-all duration-100">
                 Política de Privacidade
               </a>
-              <a href="#" className="text-[#aaaaaa] hover:text-gradient transition-all duration-100">
+              <a href="#" className="text-muted hover:text-gradient transition-all duration-100">
                 Termos de Uso
               </a>
             </div>
@@ -172,7 +172,7 @@ export default function Footer() {
         {/* Back to Top Button */}
         <button
           onClick={scrollToTop}
-          className="button-glass fixed bottom-8 right-8 w-12 h-12 bg-white/5 backdrop-blur-3xl rounded-full flex items-center justify-center shadow-lg hover:shadow-xl z-40"
+          className="button-glass fixed bottom-8 right-8 w-12 h-12 bg-foreground/5 backdrop-blur-3xl rounded-full flex items-center justify-center shadow-lg hover:shadow-xl z-40"
           aria-label="Voltar ao topo"
         >
           <ArrowUp className="h-5 w-5" />

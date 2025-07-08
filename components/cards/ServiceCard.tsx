@@ -29,15 +29,15 @@ export default function ServiceCard({
         <motion.div
           className="inline-flex items-center justify-center w-16 h-16 gradient rounded-full mb-6 group-hover:scale-105 group-hover:rotate-6 transition-all duration-200"
         >
-          <Icon className="h-8 w-8 text-white"/>
+          <Icon className="h-8 w-8 text-foreground"/>
         </motion.div>
 
         <h3
-          className="w-fit text-xl font-semibold text-white mb-4 group-hover:text-gradient transition-all duration-100">
+          className="w-fit text-xl font-semibold text-foreground mb-4 group-hover:text-gradient transition-all duration-100">
           {title}
         </h3>
 
-        <p className="text-[#aaaaaa] leading-relaxed mb-6 flex-grow">
+        <p className="text-muted leading-relaxed mb-6 flex-grow">
           {description}
         </p>
 
@@ -51,7 +51,7 @@ export default function ServiceCard({
               className="flex items-center space-x-2"
             >
               <span className="text-gradient text-lg font-bold"> {'-'} </span>
-              <span className="text-lg text-white">{feature}</span>
+              <span className="text-lg text-foreground">{feature}</span>
             </motion.div>
           ))}
         </div>

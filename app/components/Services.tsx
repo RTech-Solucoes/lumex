@@ -65,22 +65,22 @@ export default function Services() {
             initial={{opacity: 0, y: 20}}
             animate={isInView ? {opacity: 1, y: 0} : {}}
             transition={{duration: 0.6, delay: 0.2}}
-            className="inline-flex items-center px-4 py-2 bg-[#5b43e6]/10 backdrop-blur-sm rounded-full border border-[#5b43e6]/20 mb-6"
+            className="inline-flex items-center px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 mb-6"
           >
-            <Target className="h-5 w-5 text-[#5b43e6] mr-2"/>
-            <span className="text-sm text-white">Nossos Serviços</span>
+            <Target className="h-5 w-5 text-primary mr-2"/>
+            <span className="text-sm text-foreground">Nossos Serviços</span>
           </motion.div>
 
           <motion.h2
             initial={{opacity: 0, y: 30}}
             animate={isInView ? {opacity: 1, y: 0} : {}}
             transition={{duration: 0.8, delay: 0.3}}
-            className="flex justify-center items-start text-4xl md:text-5xl font-normal text-white mb-6"
+            className="flex justify-center items-start text-4xl md:text-5xl font-normal text-foreground mb-6"
           >
             O que oferecemos
             <Image
               src="/icone.png"
-              alt="Lúmex Marketing Agency"
+              alt="Lúmex Agência de Marketing"
               width={120}
               height={40}
               className="h-4 mt-1 md:mt-0 md:h-6 w-auto"
@@ -92,7 +92,7 @@ export default function Services() {
             initial={{opacity: 0, y: 30}}
             animate={isInView ? {opacity: 1, y: 0} : {}}
             transition={{duration: 0.8, delay: 0.4}}
-            className="text-xl text-[#aaaaaa] max-w-3xl mx-auto"
+            className="text-xl text-muted max-w-3xl mx-auto"
           >
             Tudo o que sua empresa precisa para se destacar no digital e vender mais:
           </motion.p>
@@ -130,10 +130,10 @@ export default function Services() {
           className="mt-20 text-center"
         >
           <div className="card-gradient p-12">
-            <h3 className="text-3xl font-bold text-white mb-6">
+            <h3 className="text-3xl font-bold text-foreground mb-6">
               Pronto para Transformar seu Negócio?
             </h3>
-            <p className="text-xl text-[#aaaaaa] max-w-2xl mx-auto mb-8">
+            <p className="text-xl text-muted max-w-2xl mx-auto mb-8">
               Descubra como o neuromarketing pode revolucionar seus resultados.
               Agende uma conversa gratuita com nossos especialistas.
             </p>

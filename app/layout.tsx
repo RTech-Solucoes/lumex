@@ -85,29 +85,29 @@ export const metadata: Metadata = {
   title: 'Lúmex',
   description: 'Na Lúmex, combinamos neurociência, marketing e estratégias personalizadas para atrair mais clientes e vender mais todos os dias. Agência especializada em neuromarketing.',
   keywords: 'neuromarketing, marketing digital, vendas online, presença digital, crescimento online, agência de marketing, neurociência, comportamento do consumidor',
-  authors: [{ name: 'Lúmex Marketing Agency' }],
-  creator: 'Lúmex Marketing Agency',
-  publisher: 'Lúmex Marketing Agency',
+  authors: [{ name: 'Lúmex Agência de Marketing' }],
+  creator: 'Lúmex Agência de Marketing',
+  publisher: 'Lúmex Agência de Marketing',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://lumex.com.br'),
+  metadataBase: new URL('https://agencialumex.com.br'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Lúmex',
     description: 'Na Lúmex, combinamos neurociência, marketing e estratégias personalizadas para atrair mais clientes e vender mais todos os dias.',
-    url: 'https://lumex.com.br',
-    siteName: 'Lúmex Marketing Agency',
+    url: 'https://agencialumex.com.br',
+    siteName: 'Lúmex Agência de Marketing',
     images: [
       {
         url: '/logo.png',
         width: 1200,
         height: 630,
-        alt: 'Lúmex Marketing Agency - Neuromarketing',
+        alt: 'Lúmex Agência de Marketing - Neuromarketing',
       },
     ],
     locale: 'pt_BR',
@@ -142,7 +142,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={`${degular.className} bg-[#18191c] text-white antialiased`}>
+      <body className={`${degular.className} bg-background text-foreground antialiased`}>
         {children}
       </body>
     </html>

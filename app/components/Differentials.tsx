@@ -61,22 +61,22 @@ export default function Differentials() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center px-4 py-2 bg-[#5b43e6]/10 backdrop-blur-sm rounded-full border border-[#5b43e6]/20 mb-6"
+            className="inline-flex items-center px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 mb-6"
           >
-            <CheckCircle className="h-5 w-5 text-[#5b43e6] mr-2" />
-            <span className="text-sm text-white">Nossos Diferenciais</span>
+            <CheckCircle className="h-5 w-5 text-primary mr-2" />
+            <span className="text-sm text-foreground">Nossos Diferenciais</span>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex gap-4 justify-center items-start text-4xl md:text-5xl font-normal text-white mb-6"
+            className="flex gap-2 justify-center items-start text-4xl md:text-5xl font-normal text-foreground mb-6"
           >
             Por que escolher a
             <Image
               src="/logo.png"
-              alt="Lúmex Marketing Agency"
+              alt="Lúmex Agência de Marketing"
               width={120}
               height={40}
               className="h-8 md:h-10 md:-mt-[1px] w-auto"
@@ -88,7 +88,7 @@ export default function Differentials() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-[#aaaaaa] max-w-3xl mx-auto"
+            className="text-xl text-muted max-w-3xl mx-auto"
           >
             Conheça os diferenciais que fazem da Lúmex a escolha certa para transformar seu negócio
           </motion.p>
@@ -132,10 +132,10 @@ export default function Differentials() {
           className="card-gradient p-8 md:p-12"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">
+            <h3 className="text-3xl font-bold text-foreground mb-4">
               Números que Comprovam nossa Excelência
             </h3>
-            <p className="text-[#aaaaaa] text-lg">
+            <p className="text-muted text-lg">
               Resultados que falam por si só
             </p>
           </div>
@@ -161,14 +161,14 @@ export default function Differentials() {
                     }}
                     className="inline-flex items-center justify-center w-16 h-16 gradient rounded-full mb-4 mx-auto"
                   >
-                    <stat.icon className="h-8 w-8 text-white" />
+                    <stat.icon className="h-8 w-8 text-foreground" />
                   </motion.div>
 
-                  <div className="text-3xl font-bold text-white mb-2">
+                  <div className="text-3xl font-bold text-foreground mb-2">
                     {stat.number}
                   </div>
 
-                  <div className="text-sm text-[#aaaaaa]">
+                  <div className="text-sm text-muted">
                     {stat.label}
                   </div>
                 </motion.div>

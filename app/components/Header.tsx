@@ -38,7 +38,7 @@ export default function Header() {
           {/* Logo */}
           <Image
             src="/logo.png"
-            alt="Lúmex Marketing Agency"
+            alt="Lúmex Agência de Marketing"
             width={120}
             height={40}
             className="h-10 w-auto"
@@ -53,7 +53,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   whileHover={{ y: -2 }}
-                  className="text-xl text-[#aaaaaa] hover:text-white transition-all duration-200 relative group"
+                  className="text-xl text-muted hover:text-foreground transition-all duration-200 relative group"
                 >
                   {item.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 gradient group-hover:w-full transition-all duration-100"></span>
@@ -63,49 +63,10 @@ export default function Header() {
           </div>
 
           {/* CTA Button */}
-          <button className="button-sm hidden lg:block font-medium">
+          <button className="button-sm font-medium text-sm md:text-xl">
             Fale Conosco
           </button>
-
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="button-transparent lg:hidden text-[#aaaaaa] hover:text-white focus:outline-none"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden backdrop-blur-3xl border-t border-white/10"
-            >
-              <div className="pt-3 space-y-3">
-                {navItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    className="text-[#aaaaaa] hover:text-white block py-2 transition-colors duration-200"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </a>
-                ))}
-                <button
-                  className="button-sm w-full mt-4 font-medium"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Fale Conosco
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
     </motion.nav>
   );

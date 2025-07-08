@@ -20,18 +20,18 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        background: '#121219',
+        foreground: '#e8eafa',
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
         popover: {
-          DEFAULT: '#5b43e6',
+          DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))',
         },
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
+          DEFAULT: '#5b43e6',
           foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
@@ -39,7 +39,7 @@ const config: Config = {
           foreground: 'hsl(var(--secondary-foreground))',
         },
         muted: {
-          DEFAULT: 'hsl(var(--muted))',
+          DEFAULT: '#aaaaaa',
           foreground: 'hsl(var(--muted-foreground))',
         },
         accent: {

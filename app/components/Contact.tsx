@@ -54,7 +54,7 @@ export default function Contact() {
       icon: Mail,
       title: "E-mail",
       description: "Para dúvidas e informações",
-      value: "contato@lumex.com.br",
+      value: "contato@agencialumex.com.br",
     },
     {
       icon: Phone,
@@ -84,22 +84,22 @@ export default function Contact() {
             initial={{opacity: 0, y: 20}}
             animate={isInView ? {opacity: 1, y: 0} : {}}
             transition={{duration: 0.6, delay: 0.2}}
-            className="inline-flex items-center px-4 py-2 bg-[#5b43e6]/10 backdrop-blur-sm rounded-full border border-[#5b43e6]/20 mb-6"
+            className="inline-flex items-center px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 mb-6"
           >
-            <MessageCircle className="h-5 w-5 text-[#5b43e6] mr-2"/>
-            <span className="text-sm text-white">Fale Conosco</span>
+            <MessageCircle className="h-5 w-5 text-primary mr-2"/>
+            <span className="text-sm text-foreground">Fale Conosco</span>
           </motion.div>
 
           <motion.h2
             initial={{opacity: 0, y: 30}}
             animate={isInView ? {opacity: 1, y: 0} : {}}
             transition={{duration: 0.8, delay: 0.3}}
-            className="flex justify-center items-start text-4xl md:text-5xl font-normal text-white mb-6"
+            className="flex justify-center items-start text-4xl md:text-5xl font-normal text-foreground mb-6"
           >
             Pronto para começar ?
             <Image
               src="/icone.png"
-              alt="Lúmex Marketing Agency"
+              alt="Lúmex Agência de Marketing"
               width={120}
               height={40}
               className="h-4 mt-1 md:mt-0 md:h-6 w-auto"
@@ -111,7 +111,7 @@ export default function Contact() {
             initial={{opacity: 0, y: 30}}
             animate={isInView ? {opacity: 1, y: 0} : {}}
             transition={{duration: 0.8, delay: 0.4}}
-            className="text-xl text-[#aaaaaa] max-w-3xl mx-auto"
+            className="text-xl text-muted max-w-3xl mx-auto"
           >
             Pronto para sair do comum e levar sua loja física para o digital com estratégias de neuromarketing?
             Fale agora com nossos especialistas e veja como podemos ajudar você a aumentar suas vendas online e offline.
@@ -126,7 +126,7 @@ export default function Contact() {
             transition={{duration: 0.8, delay: 0.5}}
           >
             <div className="card p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">
+              <h3 className="text-2xl font-bold text-foreground mb-6">
                 Solicitar Estratégia Personalizada
               </h3>
 
@@ -137,17 +137,17 @@ export default function Contact() {
                   className="text-center py-8"
                 >
                   <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4"/>
-                  <h4 className="text-xl font-semibold text-white mb-2">
+                  <h4 className="text-xl font-semibold text-foreground mb-2">
                     Mensagem Enviada!
                   </h4>
-                  <p className="text-[#aaaaaa]">
+                  <p className="text-muted">
                     Entraremos em contato em breve para discutir sua estratégia personalizada.
                   </p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Nome *
                     </label>
                     <input
@@ -157,13 +157,13 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 text-white placeholder-[#aaaaaa] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100"
+                      className="w-full px-4 py-3 bg-foreground/5 text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-100"
                       placeholder="Seu nome completo"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                       E-mail *
                     </label>
                     <input
@@ -173,13 +173,13 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 text-white placeholder-[#aaaaaa] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100"
+                      className="w-full px-4 py-3 bg-foreground/5 text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-100"
                       placeholder="seu@email.com"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
                       Telefone *
                     </label>
                     <input
@@ -189,13 +189,13 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 text-white placeholder-[#aaaaaa] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100"
+                      className="w-full px-4 py-3 bg-foreground/5 text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-100"
                       placeholder="(11) 99999-9999"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                       Mensagem
                     </label>
                     <textarea
@@ -204,7 +204,7 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={5}
-                      className="w-full px-4 py-3 bg-white/5 text-white placeholder-[#aaaaaa] focus:outline-none focus:ring-2 focus:ring-[#5b43e6] focus:border-transparent transition-all duration-100 resize-none"
+                      className="w-full px-4 py-3 bg-foreground/5 text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-100 resize-none"
                       placeholder="Conte-nos mais sobre seu negócio e objetivos..."
                     />
                   </div>
@@ -215,7 +215,7 @@ export default function Contact() {
                     className="button-md w-full font-semibold inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"/>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-foreground"/>
                     ) : (
                       <>
                         Enviar Mensagem
@@ -250,17 +250,17 @@ export default function Contact() {
                         whileHover={{scale: 1.1, rotate: 5}}
                         className="flex-shrink-0 w-12 h-12 gradient rounded-full flex items-center justify-center"
                       >
-                        <info.icon className="h-6 w-6 text-white"/>
+                        <info.icon className="h-6 w-6 text-foreground"/>
                       </motion.div>
 
                       <div className="flex-1">
-                        <h4 className="text-lg font-semibold text-white mb-1 transition-all duration-100">
+                        <h4 className="text-lg font-semibold text-foreground mb-1 transition-all duration-100">
                           {info.title}
                         </h4>
-                        <p className="text-[#aaaaaa] text-sm mb-2">
+                        <p className="text-muted text-sm mb-2">
                           {info.description}
                         </p>
-                        <p className="text-white font-medium">
+                        <p className="text-foreground font-medium">
                           {info.value}
                         </p>
                       </div>

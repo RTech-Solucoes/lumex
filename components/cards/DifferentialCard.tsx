@@ -27,14 +27,14 @@ export default function DifferentialCard({
         <motion.div
           className="inline-flex items-center justify-center w-16 h-16 gradient rounded-full mb-6 group-hover:scale-105 group-hover:rotate-6 transition-all duration-300"
         >
-          <Icon className="h-8 w-8 text-white" />
+          <Icon className="h-8 w-8 text-foreground" />
         </motion.div>
 
-        <h3 className="w-fit text-xl font-semibold text-white mb-4 group-hover:text-gradient transition-all duration-100">
+        <h3 className="w-fit text-xl font-semibold text-foreground mb-4 group-hover:text-gradient transition-all duration-100">
           {title}
         </h3>
 
-        <p className="text-[#aaaaaa] leading-relaxed">
+        <p className="text-muted leading-relaxed">
           {description}
         </p>
       </div>
