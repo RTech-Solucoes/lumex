@@ -12,16 +12,16 @@ export default function Hero() {
       style={{ maxHeight: "calc(100vh - 96px)" }}
       className="relative h-screen flex items-center justify-center overflow-hidden bg-transparent"
     >
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Image
           src="/lamp.png"
           alt="Ilustração de uma Lâmpada"
           width={1067}
           height={911}
-          className="absolute -top-40 -right-24 w-4/5 h-auto"
+          className="absolute -top-40 -right-24 w-4/5 h-auto z-10"
           priority
         />
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center z-50">
           {/* Left Column - Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}

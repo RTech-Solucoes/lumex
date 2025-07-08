@@ -98,7 +98,7 @@ export default function Differentials() {
         <div className="flex flex-col gap-8 mb-20">
           <div
             style={{ gridTemplateColumns: '1fr 2fr'}}
-            className="flex flex-col md:grid gap-8"
+            className="flex flex-col lg:grid gap-8"
           >
             {differentials.slice(0, 2).map((differential, index) =>
               <DifferentialCard
@@ -111,7 +111,7 @@ export default function Differentials() {
           </div>
           <div
             style={{ gridTemplateColumns: '2fr 1fr'}}
-            className="flex flex-col md:grid gap-8"
+            className="flex flex-col lg:grid gap-8"
           >
             {differentials.slice(2, 4).map((differential, index) =>
               <DifferentialCard
