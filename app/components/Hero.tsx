@@ -7,7 +7,11 @@ import CountUp from "@/components/reactbits/TextAnimations/CountUp/CountUp";
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent">
+    <section
+      id="inicio"
+      style={{ maxHeight: "calc(100vh - 96px)" }}
+      className="relative h-screen flex items-center justify-center overflow-hidden bg-transparent"
+    >
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
