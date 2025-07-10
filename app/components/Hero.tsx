@@ -4,8 +4,11 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Brain } from 'lucide-react';
 import Image from "next/image";
 import CountUp from "@/components/reactbits/TextAnimations/CountUp/CountUp";
+import {useState} from "react";
 
 export default function Hero() {
+  const [lightOn, setLightOn] = useState(true);
+
   return (
     <section
       id="inicio"
@@ -18,7 +21,8 @@ export default function Hero() {
           alt="Ilustração de uma Lâmpada"
           width={1067}
           height={911}
-          className="absolute opacity-50 md:opacity-100 top-0 md:-top-20 -right-14 md:-right-24 w-4/5 h-auto z-10"
+          onClick={() => setLightOn((prev) => !prev)}
+          className={`${lightOn ? "opacity-50 md:opacity-100" : "opacity-10"} absolute top-0 md:-top-20 -right-14 md:-right-24 w-4/5 h-auto z-10 cursor-pointer transition-all duration-100`}
           priority
         />
         <div className="relative grid gap-12 items-center z-50">
