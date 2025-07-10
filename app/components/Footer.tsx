@@ -172,7 +172,6 @@ export default function Footer() {
         {/* Back to Top Button */}
         <button
           onClick={scrollToTop}
-          type="fab"
           className="button-glass fixed bottom-8 right-8 w-12 h-12 bg-foreground/5 backdrop-blur-3xl rounded-full flex items-center justify-center shadow-lg hover:shadow-xl z-40"
           aria-label="Voltar ao topo"
         >
