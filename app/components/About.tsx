@@ -5,6 +5,7 @@ import {useInView} from 'framer-motion';
 import {useRef} from 'react';
 import {Brain, Users, TrendingUp, Award} from 'lucide-react';
 import Image from "next/image";
+import {CardBody, CardContainer, CardItem} from "@/components/ui/3d-card";
 
 export default function About() {
   const ref = useRef(null);
@@ -83,26 +84,38 @@ export default function About() {
                 initial={{opacity: 0, y: 50}}
                 animate={isInView ? {opacity: 1, y: 0} : {}}
                 transition={{duration: 0.8, delay: 0.6 + index * 0.1}}
-                className="group"
+                className="flex"
               >
-                <div className="card p-8 h-full">
-                  <motion.div
-                    className="inline-flex items-center justify-center w-16 h-16 gradient rounded-full mb-6 group-hover:scale-105 group-hover:rotate-6 transition-all duration-200"
+                <CardContainer className="group card p-8 h-full">
+                  <CardBody>
+                    <CardItem
+                      translateZ="100"
+                      className="
+                        inline-flex items-center justify-center w-16 h-16 gradient rounded-full mb-6
+                         transition-all duration-200
+                      "
+                    >
+                      <feature.icon className="h-8 w-8 text-foreground"/>
+                    </CardItem>
+                  <CardItem
+                    as="h3"
+                    translateZ="100"
+                    className="w-fit text-xl font-medium text-foreground mb-4 group-hover:text-gradient"
                   >
-                    <feature.icon className="h-8 w-8 text-foreground"/>
-                  </motion.div>
-
-                  <h3
-                    className="w-fit text-xl font-normal text-foreground mb-4 group-hover:text-gradient transition-all duration-100">
                     {feature.title}
-                  </h3>
-
-                  <p className="text-muted leading-relaxed">
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="100"
+                    className="text-muted leading-relaxed"
+                  >
                     {feature.description}
-                  </p>
-                </div>
-              </motion.div>
-            );
+                  </CardItem>
+                </CardBody>
+              </CardContainer>
+          </motion.div>
+          )
+            ;
           })}
         </div>
 

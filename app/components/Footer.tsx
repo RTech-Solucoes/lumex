@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Instagram, Linkedin, MessageCircle, Mail, Phone, ArrowUp } from 'lucide-react';
 import Image from 'next/image';
+import Link from "next/link";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -144,10 +145,10 @@ export default function Footer() {
               </div>
             </div>
 
-            <button className="button-sm mt-6 font-medium inline-flex items-center">
-              Fale Conosco
+            <Link href="#contato" className="button-sm mt-6 font-medium inline-flex items-center">
+              <span>Fale Conosco</span>
               <ArrowUp className="ml-2 h-4 w-4 rotate-45" />
-            </button>
+            </Link>
           </motion.div>
         </div>
 

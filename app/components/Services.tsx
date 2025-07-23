@@ -120,7 +120,7 @@ export default function Services() {
           transition={{duration: 0.8, delay: 1.2}}
           className="mt-20 text-center"
         >
-          <div className="card-gradient p-12">
+          <div className="flex items-center flex-col card-gradient p-12">
             <h3 className="text-3xl font-normal text-foreground mb-6">
               Pronto para Transformar seu Negócio?
             </h3>
@@ -128,8 +128,8 @@ export default function Services() {
               Descubra como o neuromarketing pode revolucionar seus resultados.
               Agende uma conversa gratuita com nossos especialistas.
             </p>
-            <button className="button-md group font-normal inline-flex items-center justify-center ">
-              Agendar Conversa Gratuita
+            <button className="button-md group font-medium inline-flex items-center justify-center">
+              <span>Agendar Conversa Gratuita</span>
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"/>
             </button>
           </div>

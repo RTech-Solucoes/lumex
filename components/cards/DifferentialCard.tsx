@@ -1,5 +1,6 @@
 import {motion} from "framer-motion";
 import {LucideIcon} from "lucide-react";
+import {CardBody, CardContainer, CardItem} from "@/components/ui/3d-card";
 
 export default function DifferentialCard({
   Icon,
@@ -23,21 +24,31 @@ export default function DifferentialCard({
       transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
       className="group"
     >
-      <div className="card p-8 h-full">
-        <motion.div
-          className="inline-flex items-center justify-center w-16 h-16 gradient rounded-full mb-6 group-hover:scale-105 group-hover:rotate-6 transition-all duration-300"
-        >
-          <Icon className="h-8 w-8 text-foreground" />
-        </motion.div>
+      <CardContainer className="group card p-8 w-full h-full">
+        <CardBody className="space-y-2">
+          <CardItem
+            translateZ="100"
+            className="inline-flex items-center justify-center w-16 h-16 gradient rounded-full mb-6"
+          >
+            <Icon className="h-8 w-8 text-foreground" />
+          </CardItem>
 
-        <h3 className="w-fit text-xl font-normal text-foreground mb-4 group-hover:text-gradient transition-all duration-100">
-          {title}
-        </h3>
+          <CardItem
+            translateZ="100"
+            as="h3" className="w-fit text-xl font-medium text-foreground mb-4 group-hover:text-gradient"
+          >
+            {title}
+          </CardItem>
 
-        <p className="text-muted leading-relaxed">
-          {description}
-        </p>
-      </div>
+          <CardItem
+            translateZ="100"
+            as="p"
+            className="text-muted leading-relaxed"
+          >
+            {description}
+          </CardItem>
+        </CardBody>
+      </CardContainer>
     </motion.div>
   );
 }

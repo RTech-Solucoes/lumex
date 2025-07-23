@@ -4,9 +4,60 @@
 
 :root {
   --gradient-to-r: linear-gradient(to right, #5b43e6, #f5503d);
-  --gradient-to-r-10: linear-gradient(to right, #5b43e610, #f5503d0d);
+  --gradient-to-r-primary: linear-gradient(to right, #5b43e6, #FFFFFF10);
+  --gradient-to-r-secondary: linear-gradient(to right, #FFFFFF10, #f5503d);
+  --gradient-to-r-10: linear-gradient(to right, #5b43e610, #f5503d10);
+  --gradient-to-r-10-primary: linear-gradient(to right, #5b43e610, #FFFFFF10);
+  --gradient-to-r-10-secondary: linear-gradient(to right, #FFFFFF10, #f5503d10);
+
+  --gradient-to-l: linear-gradient(to left, #5b43e6, #f5503d);
+  --gradient-to-l-primary: linear-gradient(to left, #5b43e6, #FFFFFF10);
+  --gradient-to-l-secondary: linear-gradient(to left, #FFFFFF10, #f5503d);
+  --gradient-to-l-10: linear-gradient(to left, #5b43e610, #f5503d10);
+  --gradient-to-l-10-primary: linear-gradient(to left, #5b43e610, #FFFFFF10);
+  --gradient-to-l-10-secondary: linear-gradient(to left, #FFFFFF10, #f5503d10);
+
+  --gradient-to-t: linear-gradient(to top, #5b43e6, #f5503d);
+  --gradient-to-t-primary: linear-gradient(to top, #5b43e6, #FFFFFF10);
+  --gradient-to-t-secondary: linear-gradient(to top, #FFFFFF10, #f5503d);
+  --gradient-to-t-10: linear-gradient(to top, #5b43e610, #f5503d10);
+  --gradient-to-t-10-primary: linear-gradient(to top, #5b43e610, #FFFFFF10);
+  --gradient-to-t-10-secondary: linear-gradient(to top, #FFFFFF10, #f5503d10);
+
+  --gradient-to-tl: linear-gradient(to top left, #5b43e6, #f5503d);
+  --gradient-to-tl-primary: linear-gradient(to top left, #5b43e6, #FFFFFF10);
+  --gradient-to-tl-secondary: linear-gradient(to top left, #FFFFFF10, #f5503d);
+  --gradient-to-tl-10: linear-gradient(to top left, #5b43e610, #f5503d10);
+  --gradient-to-tl-10-primary: linear-gradient(to top left, #5b43e610, #FFFFFF10);
+  --gradient-to-tl-10-secondary: linear-gradient(to top left, #FFFFFF10, #f5503d10);
+
+  --gradient-to-tr: linear-gradient(to top right, #5b43e6, #f5503d);
+  --gradient-to-tr-primary: linear-gradient(to top right, #5b43e6, #FFFFFF10);
+  --gradient-to-tr-secondary: linear-gradient(to top right, #FFFFFF10, #f5503d);
+  --gradient-to-tr-10: linear-gradient(to top right, #5b43e610, #f5503d10);
+  --gradient-to-tr-10-primary: linear-gradient(to top right, #5b43e610, #FFFFFF10);
+  --gradient-to-tr-10-secondary: linear-gradient(to top right, #FFFFFF10, #f5503d10);
+
   --gradient-to-b: linear-gradient(to bottom, #5b43e6, #f5503d);
-  --gradient-to-b-10: linear-gradient(to bottom, #5b43e610, #f5503d0d);
+  --gradient-to-b-primary: linear-gradient(to bottom, #5b43e6, #FFFFFF10);
+  --gradient-to-b-secondary: linear-gradient(to bottom, #FFFFFF10, #f5503d);
+  --gradient-to-b-10: linear-gradient(to bottom, #5b43e610, #f5503d10);
+  --gradient-to-b-10-primary: linear-gradient(to bottom, #5b43e610, #FFFFFF10);
+  --gradient-to-b-10-secondary: linear-gradient(to bottom, #FFFFFF10, #f5503d10);
+
+  --gradient-to-bl: linear-gradient(to bottom left, #5b43e6, #f5503d);
+  --gradient-to-bl-primary: linear-gradient(to bottom left, #5b43e6, #FFFFFF10);
+  --gradient-to-bl-secondary: linear-gradient(to bottom left, #FFFFFF10, #f5503d);
+  --gradient-to-bl-10: linear-gradient(to bottom left, #5b43e610, #f5503d10);
+  --gradient-to-bl-10-primary: linear-gradient(to bottom left, #5b43e610, #FFFFFF10);
+  --gradient-to-bl-10-secondary: linear-gradient(to bottom left, #FFFFFF10, #f5503d10);
+
+  --gradient-to-br: linear-gradient(to bottom right, #5b43e6, #f5503d);
+  --gradient-to-br-primary: linear-gradient(to bottom right, #5b43e6, #FFFFFF10);
+  --gradient-to-br-secondary: linear-gradient(to bottom right, #FFFFFF10, #f5503d);
+  --gradient-to-br-10: linear-gradient(to bottom right, #5b43e610, #f5503d10);
+  --gradient-to-br-10-primary: linear-gradient(to bottom right, #5b43e610, #FFFFFF10);
+  --gradient-to-br-10-secondary: linear-gradient(to bottom right, #FFFFFF10, #f5503d10);
 }
 
 @layer base {
@@ -17,10 +68,10 @@
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 249, 77%, 58%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 6, 90%, 60%;
-    --secondary-foreground: 0 0% 9%;
+    --primary: 6, 90%, 60%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 249, 77%, 58%;
+    --secondary-foreground: 0 0% 98%;
     --muted: 0, 0%, 67%;
     --muted-foreground: 0 0% 45.1%;
     --accent: 0 0% 96.1%;
@@ -44,9 +95,9 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 249, 77%, 58%;
+    --primary: 6, 90%, 60%;
     --primary-foreground: 0 0% 9%;
-    --secondary: 6, 90%, 60%;
+    --secondary: 249, 77%, 58%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0, 0%, 67%;
     --muted-foreground: 0 0% 63.9%;
@@ -126,6 +177,14 @@
   }
 }
 
+.bg-primary {
+  background: hsl(var(--primary));
+}
+
+.bg-secondary {
+  background: hsl(var(--secondary));
+}
+
 .gradient {
   background: var(--gradient-to-r);
   @apply text-foreground
@@ -142,6 +201,42 @@
 
 .hover\:gradient\/10:hover {
   @apply gradient/10;
+}
+
+.gradient-primary {
+  background: var(--gradient-to-r-primary);
+  @apply text-foreground
+}
+
+.hover\:gradient-primary:hover {
+  @apply gradient;
+}
+
+.gradient-primary\/10 {
+  background: var(--gradient-to-r-10-primary);
+  @apply text-foreground
+}
+
+.hover\:gradient-primary\/10:hover {
+  @apply gradient;
+}
+
+.gradient-secondary{
+  background: var(--gradient-to-r-secondary);
+  @apply text-foreground
+}
+
+.hover\:gradient-secondary:hover {
+  @apply gradient;
+}
+
+.gradient-secondary\/10 {
+  background: var(--gradient-to-r-10-secondary);
+  @apply text-foreground
+}
+
+.hover\:gradient-secondary\/10:hover {
+  @apply gradient;
 }
 
 .text-gradient {
@@ -165,32 +260,80 @@
   }
 }
 
-button {
-  background: var(--gradient-to-r) !important;
+button,
+.button {
   @apply
+  flex
+  relative
+  z-50
   text-foreground
   transition-all
-  duration-100;
+  duration-100
+  cursor-pointer;
+
 }
 
-button:hover {
-  @apply scale-105;
+button > *,
+.button > * {
+  @apply z-20;
 }
 
-button:active {
-  @apply scale-95;
+button::before,
+.button::before,
+button::after,
+.button::after {
+  @apply
+  absolute
+  inset-0
+  gradient-primary
+  z-10
+  transition-all
+  duration-200;
+  content: '';
+}
+
+button::before,
+.button::before {
+  background: var(--gradient-to-r-secondary);
+}
+
+button::after,
+.button::after {
+  background: var(--gradient-to-r-primary);
+}
+
+button:hover::before,
+.button:hover::before {
+  @apply -bottom-2 -right-2;
+}
+
+button:hover::after,
+.button:hover::after {
+  @apply -top-2 -left-2;
+}
+
+button:active::before,
+.button:active::before,
+button:active::after,
+.button:active::after {
+  @apply inset-0;
 }
 
 .button-md {
-  @apply px-8 py-4;
+  @apply text-xl button px-8 py-4;
 }
 
 .button-sm {
-  @apply px-6 py-3;
+  @apply text-lg button px-6 py-3;
 }
 
-.button-transparent {
-  background: none !important;
+.button-glass {
+  background: #ffffff0D !important;
+  @apply backdrop-blur-3xl;
+}
+
+.button-glass::before, .button-glass::after  {
+  @apply hidden;
 }
 
 .button-glass {
@@ -201,8 +344,9 @@ button:active {
 .card {
   @apply
   bg-foreground/5
-  backdrop-blur-3xl
-  cursor-pointer
+  cursor-pointer;
+
+  clip-path: polygon(24px 0%, calc(100% - 24px) 0%, 100% 24px, 100% 100%, calc(100% - 24px) 100%, 24px 100%, 0px 100%, 0px 0px);
 }
 
 .card-gradient {

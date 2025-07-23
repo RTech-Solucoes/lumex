@@ -202,13 +202,13 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="button-md w-full font-normal inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="button-md w-full font-medium inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-foreground"/>
                     ) : (
                       <>
-                        Enviar Mensagem
+                        <span>Enviar Mensagem</span>
                         <ArrowRight className="ml-2 h-5 w-5"/>
                       </>
                     )}

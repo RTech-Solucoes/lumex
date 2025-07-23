@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,6 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { href: '#inicio', label: 'Início' },
     { href: '#sobre', label: 'Sobre' },
     { href: '#servicos', label: 'Serviços' },
     // { href: '#resultados', label: 'Resultados' },
@@ -63,9 +63,9 @@ export default function Header() {
           </div>
 
           {/* CTA Button */}
-          <button className="button-sm font-medium text-sm md:text-xl">
-            Fale Conosco
-          </button>
+          <Link href="#contato" className="button-sm font-medium text-sm md:text-xl">
+            <span>Fale Conosco</span>
+          </Link>
         </div>
       </div>
     </motion.nav>
