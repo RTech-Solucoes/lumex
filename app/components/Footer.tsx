@@ -145,7 +145,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <Link href="#contato" className="button-sm mt-6 font-medium inline-flex items-center">
+            <Link href="#contato" className="button-sm mt-6 font-medium inline-flex items-center w-fit">
               <span>Fale Conosco</span>
               <ArrowUp className="ml-2 h-4 w-4 rotate-45" />
             </Link>
