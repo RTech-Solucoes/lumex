@@ -128,10 +128,10 @@ export default function Services() {
               Descubra como o neuromarketing pode revolucionar seus resultados.
               Agende uma conversa gratuita com nossos especialistas.
             </p>
-            <button className="button-md group font-medium inline-flex items-center justify-center">
+            <a href="#contato" className="button-md group font-medium inline-flex items-center justify-center">
               <span>Agendar Conversa Gratuita</span>
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"/>
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>
