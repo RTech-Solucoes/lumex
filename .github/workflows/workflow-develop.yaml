@@ -1,0 +1,42 @@
+name: Deploy App
+
+on:
+  push:
+    branches:
+      - feat/pipeline-cicd
+
+jobs:
+  deploy:
+    runs-on: self-hosted, ec2, apps
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Configurar Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Pull latest
+        run: |
+          cd /home/ubuntu/lumex
+          git pull origin develop
+
+      - name: Build image Docker
+        id: docker-build
+        run: |
+          docker tag lumex:latest lumex:old
+          docker build --no-cache -t lumex .
+
+      - name: Stop and remove old container
+        run: |
+          docker stop lumex
+          docker rm lumex
+          docker rmi lumex:latest
+
+      - name: Deploy new container
+        run: |
+          docker run -d -p 3000:3000 --restart always --name lumex lumex:latest
+          sleep 15;
+
+      - name: Clean up old images
+        run: |
+          docker image prune -af
